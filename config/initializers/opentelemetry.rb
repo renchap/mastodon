@@ -57,6 +57,13 @@ if ENV.keys.any? {|name| name.match?(/OTEL_.*_ENDPOINT/)}
     # OTEL_RUBY_INSTRUMENTATION_PG_ENABLED=false
     # OTEL_RUBY_INSTRUMENTATION_REDIS_ENABLED=false
     # 
-    c.use_all()
+    # ActiveRecord instrumentation disabled while investigating interaction
+    # with attr_encrypted and both gems patching of ActiveRecord#reload
+    c.use_all({ 'OpenTelemetry::Instrumentation::ActiveRecord' => { enabled: false } })
   end
+
+  # Create spans for some ActiveRecord activity (queries, but not callbacks) with a subscription
+  # to `sql.active_record` https://guides.rubyonrails.org/active_support_instrumentation.html#active-record
+  tracer = OpenTelemetry.tracer_provider.tracer('OpenTelemetry::Instrumentation::ActiveSupport')
+  ::OpenTelemetry::Instrumentation::ActiveSupport.subscribe(tracer, 'sql.active_record')
 end
