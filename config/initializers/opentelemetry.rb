@@ -62,8 +62,11 @@ if ENV.keys.any? {|name| name.match?(/OTEL_.*_ENDPOINT/)}
     c.use_all({ 'OpenTelemetry::Instrumentation::ActiveRecord' => { enabled: false } })
   end
 
-  # Create spans for some ActiveRecord activity (queries, but not callbacks) with a subscription
-  # to `sql.active_record` https://guides.rubyonrails.org/active_support_instrumentation.html#active-record
-  tracer = OpenTelemetry.tracer_provider.tracer('OpenTelemetry::Instrumentation::ActiveSupport')
-  ::OpenTelemetry::Instrumentation::ActiveSupport.subscribe(tracer, 'sql.active_record')
+  # Create spans for some ActiveRecord activity (queries, but not callbacks)
+  # by subscribing OTel's ActiveSupport instrument to `sql.active_record` events
+  # https://guides.rubyonrails.org/active_support_instrumentation.html#active-record
+  ::OpenTelemetry::Instrumentation::ActiveSupport.subscribe(
+    OpenTelemetry.tracer_provider.tracer('ActiveRecord'), 
+    'sql.active_record'
+  )
 end
