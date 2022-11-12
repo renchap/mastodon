@@ -20,15 +20,21 @@ if ENV.keys.any? {|name| name.match?(/OTEL_.*_ENDPOINT/)}
 
 
   OpenTelemetry::SDK.configure do |c|
-    # set a sensible service name if one wasn't provided
-    # by environment variable
+    # You may optionally set the service.name for a process
+    # with an environment variable the OTel SDK looks for.
+    #
+    # For example, when running rake tasks, you might set
+    # this env var to 'rake' or be specific with 'db:migrate'.
     unless ENV['OTEL_SERVICE_NAME'].present?
-      c.service_name = case $PROGRAM_NAME
-                        when /puma/
-                          "web"
-                        when /sidekiq/
-                          "sidekiq"
-                        else
+      # If left unseet, the service.name in the telemetry
+      # emitted from a process will match the name given for
+      # a process/service in the runners (e.g. Procfile,
+      # docker-compose, etc) to help a person running Mastodon
+      # map behavior back to a service.
+      c.service_name =  case $PROGRAM_NAME
+                        when /puma/ ; "web"
+                        when /sidekiq/ ; "sidekiq"
+                        else 
                           $PROGRAM_NAME.split("/").last
                         end
     end
