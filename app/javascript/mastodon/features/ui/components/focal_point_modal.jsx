@@ -19,9 +19,9 @@ import { Tesseract as fetchTesseract } from 'mastodon/features/ui/util/async-com
 import GIFV from 'mastodon/components/gifv';
 import { me } from 'mastodon/initial_state';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import tesseractCorePath from 'tesseract.js-core/tesseract-core.wasm.js';
+import tesseractCorePath from 'tesseract.js-core/tesseract-core.wasm.js?url';
 // eslint-disable-next-line import/extensions
-import tesseractWorkerPath from 'tesseract.js/dist/worker.min.js';
+import tesseractWorkerPath from 'tesseract.js/dist/worker.min.js?url';
 import { assetHost } from 'mastodon/utils/config';
 
 const messages = defineMessages({

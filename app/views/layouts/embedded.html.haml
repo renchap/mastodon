@@ -16,7 +16,7 @@
     = javascript_pack_tag 'common', integrity: true, crossorigin: 'anonymous'
     = javascript_pack_tag "locale_#{I18n.locale}", integrity: true, crossorigin: 'anonymous'
     = render_initial_state
-    = javascript_pack_tag 'public', integrity: true, crossorigin: 'anonymous'
+    = vite_javascript_tag 'public', crossorigin: 'anonymous'
   %body.embed
     = yield
 

@@ -6,26 +6,26 @@
 
 let marky;
 
-if (process.env.NODE_ENV === 'development') {
+if (import.meta.env.DEV) {
   if (typeof performance !== 'undefined' && performance.setResourceTimingBufferSize) {
     // Increase Firefox's performance entry limit; otherwise it's capped to 150.
     // See: https://bugzilla.mozilla.org/show_bug.cgi?id=1331135
     performance.setResourceTimingBufferSize(Infinity);
   }
-  marky = require('marky');
+  // marky = require('marky');
   // allows us to easily do e.g. ReactPerf.printWasted() while debugging
   //window.ReactPerf = require('react-addons-perf');
   //window.ReactPerf.start();
 }
 
 export function start(name) {
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     marky.mark(name);
   }
 }
 
 export function stop(name) {
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     marky.stop(name);
   }
 }

@@ -17,7 +17,7 @@ import { getLocale } from 'mastodon/locales';
 const { localeData, messages } = getLocale();
 addLocaleData(localeData);
 
-const title = process.env.NODE_ENV === 'production' ? siteTitle : `${siteTitle} (Dev)`;
+const title = import.meta.env.PROD ? siteTitle : `${siteTitle} (Dev)`;
 
 export const store = configureStore();
 const hydrateAction = hydrateStore(initialState);

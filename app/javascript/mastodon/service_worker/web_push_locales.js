@@ -32,4 +32,6 @@ filenames.forEach(filename => {
   };
 });
 
-module.exports = JSON.parse(JSON.stringify(filtered));
+const ex = JSON.parse(JSON.stringify(filtered));
+
+export default ex;

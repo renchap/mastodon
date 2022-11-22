@@ -6,6 +6,17 @@ import { start } from '../mastodon/common';
 import loadKeyboardExtensions from '../mastodon/load_keyboard_extensions';
 import 'cocoon-js-vanilla';
 
+import IntlMessageFormat from 'intl-messageformat';
+import { timeAgoString } from '../mastodon/components/relative_timestamp';
+import { delegate }  from '@rails/ujs';
+import emojify from '../mastodon/features/emoji/emoji';
+import { getLocale } from '../mastodon/locales';
+
+const { messages } = getLocale();
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createBrowserHistory } from 'history';
+
 start();
 
 window.addEventListener('message', e => {
@@ -25,16 +36,6 @@ window.addEventListener('message', e => {
 });
 
 function main() {
-  const IntlMessageFormat = require('intl-messageformat').default;
-  const { timeAgoString } = require('../mastodon/components/relative_timestamp');
-  const { delegate } = require('@rails/ujs');
-  const emojify = require('../mastodon/features/emoji/emoji').default;
-  const { getLocale } = require('../mastodon/locales');
-  const { messages } = getLocale();
-  const React = require('react');
-  const ReactDOM = require('react-dom');
-  const { createBrowserHistory } = require('history');
-
   const scrollToDetailedStatus = () => {
     const history = createBrowserHistory();
     const detailedStatuses = document.querySelectorAll('.public-layout .detailed-status');

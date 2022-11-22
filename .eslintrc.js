@@ -35,7 +35,7 @@ module.exports = {
       version: 'detect',
     },
     'import/extensions': [
-      '.js',
+      '.js', '.jsx',
     ],
     'import/ignore': [
       'node_modules',

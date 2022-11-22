@@ -1,21 +1,20 @@
-// @preval
+
 // http://www.unicode.org/Public/emoji/5.0/emoji-test.txt
 // This file contains the compressed version of the emoji data from
 // both emoji_map.json and from emoji-mart's emojiIndex and data objects.
 // It's designed to be emitted in an array format to take up less space
 // over the wire.
 
-const { unicodeToFilename } = require('./unicode_to_filename');
-const { unicodeToUnifiedName } = require('./unicode_to_unified_name');
-const emojiMap = require('./emoji_map.json');
-const { emojiIndex } = require('emoji-mart');
-const { uncompress: emojiMartUncompress } = require('emoji-mart/dist/utils/data');
+import { unicodeToFilename }  from './unicode_to_filename';
+import { unicodeToUnifiedName } from './unicode_to_unified_name';
+import emojiMap from './emoji_map.json';
+import { emojiIndex } from 'emoji-mart';
+import { uncompress as emojiMartUncompress } from 'emoji-mart/dist/utils/data';
 
-let data = require('emoji-mart/data/all.json');
+import data from 'emoji-mart/data/all.json';
 
-if(data.compressed) {
-  data = emojiMartUncompress(data);
-}
+if(data.compressed)
+  emojiMartUncompress(data);
 
 const emojiMartData = data;
 
@@ -113,10 +112,12 @@ Object.keys(emojiIndex.emojis).forEach(key => {
 
 // JSON.parse/stringify is to emulate what @preval is doing and avoid any
 // inconsistent behavior in dev mode
-module.exports = JSON.parse(JSON.stringify([
+const ex = JSON.parse(JSON.stringify([
   shortCodesToEmojiData,
   emojiMartData.skins,
   emojiMartData.categories,
   emojiMartData.aliases,
   emojisWithoutShortCodes,
 ]));
+
+export default ex;
