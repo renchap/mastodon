@@ -196,6 +196,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/first': 'error',
     'import/newline-after-import': 'error',
     'import/no-extraneous-dependencies': [
       'error',
@@ -291,6 +292,45 @@ module.exports = {
 
       rules: {
         'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+
+        'import/order': [
+          'error',
+          {
+            alphabetize: { order: 'asc' },
+            'newlines-between': 'always',
+            groups: [
+              'builtin',
+              'external',
+              'internal',
+              'parent',
+              ['index', 'sibling'],
+              'object',
+            ],
+            pathGroups: [
+              {
+                pattern: '{react,react-dom,prop-types}',
+                group: 'builtin',
+                position: 'after',
+              },
+              {
+                pattern: 'react-intl',
+                group: 'builtin',
+                position: 'after',
+              },
+              {
+                pattern: '{immutable,react-redux}',
+                group: 'external',
+                position: 'before',
+              },
+              {
+                pattern: '{mastodon/**}',
+                group: 'internal',
+                position: 'after',
+              },
+            ],
+            pathGroupsExcludedImportTypes: [],
+          },
+        ],
 
         '@typescript-eslint/consistent-type-definitions': ['warn', 'interface'],
         '@typescript-eslint/consistent-type-exports': 'error',
