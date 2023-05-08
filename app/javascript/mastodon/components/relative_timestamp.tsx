@@ -1,5 +1,6 @@
 import React from 'react';
-import { injectIntl, defineMessages, InjectedIntl } from 'react-intl';
+import type { InjectedIntl } from 'react-intl';
+import { injectIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({
   today: { id: 'relative_time.today', defaultMessage: 'today' },
@@ -120,14 +121,14 @@ const timeRemainingString = (intl: InjectedIntl, date: Date, now: number, timeGi
   return relativeTime;
 };
 
-type Props = {
+interface Props {
   intl: InjectedIntl;
   timestamp: string;
   year: number;
   futureDate?: boolean;
   short?: boolean;
 }
-type States = {
+interface States {
   now: number;
 }
 class RelativeTimestamp extends React.Component<Props, States> {

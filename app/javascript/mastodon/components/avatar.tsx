@@ -4,13 +4,13 @@ import { autoPlayGif } from '../initial_state';
 import { useHovering } from '../../hooks/useHovering';
 import type { Account } from '../../types/resources';
 
-type Props = {
+interface Props {
   account: Account;
   size: number;
   style?: React.CSSProperties;
   inline?: boolean;
   animate?: boolean;
-};
+}
 
 export const Avatar: React.FC<Props> = ({
   account,
@@ -41,7 +41,7 @@ export const Avatar: React.FC<Props> = ({
       onMouseLeave={handleMouseLeave}
       style={style}
     >
-      {src && <img src={src} alt={account?.get('acct')} />}
+      {src && <img src={src} alt={account?.get('acct') as string} />}
     </div>
   );
 };

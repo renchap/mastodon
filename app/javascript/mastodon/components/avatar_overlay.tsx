@@ -3,13 +3,13 @@ import type { Account } from '../../types/resources';
 import { useHovering } from '../../hooks/useHovering';
 import { autoPlayGif } from '../initial_state';
 
-type Props = {
+interface Props {
   account: Account;
   friend: Account;
   size?: number;
   baseSize?: number;
   overlaySize?: number;
-};
+}
 
 export const AvatarOverlay: React.FC<Props> = ({
   account,
@@ -33,7 +33,7 @@ export const AvatarOverlay: React.FC<Props> = ({
           className='account__avatar'
           style={{ width: `${baseSize}px`, height: `${baseSize}px` }}
         >
-          {accountSrc && <img src={accountSrc} alt={account?.get('acct')} />}
+          {accountSrc && <img src={accountSrc} alt={account?.get('acct') as string} />}
         </div>
       </div>
       <div className='account__avatar-overlay-overlay'>
@@ -41,7 +41,7 @@ export const AvatarOverlay: React.FC<Props> = ({
           className='account__avatar'
           style={{ width: `${overlaySize}px`, height: `${overlaySize}px` }}
         >
-          {friendSrc && <img src={friendSrc} alt={friend?.get('acct')} />}
+          {friendSrc && <img src={friendSrc} alt={friend?.get('acct') as string} />}
         </div>
       </div>
     </div>

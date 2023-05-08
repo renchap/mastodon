@@ -1,10 +1,11 @@
 import type { Record } from 'immutable';
 
-type AccountValues = {
+interface AccountValues {
   id: number;
   avatar: string;
   avatar_static: string;
-  [key: string]: any;
-};
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any; // FIXME
+}
 
 export type Account = Record<AccountValues>;
