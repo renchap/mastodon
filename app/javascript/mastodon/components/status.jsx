@@ -14,9 +14,9 @@ import ImmutablePureComponent from 'react-immutable-pure-component';
 import { MediaGallery, Video, Audio } from '../features/ui/util/async-components';
 import { HotKeys } from 'react-hotkeys';
 import classNames from 'classnames';
-import Icon from 'mastodon/components/icon';
-import { displayMedia } from '../initial_state';
-import PictureInPicturePlaceholder from 'mastodon/components/picture_in_picture_placeholder';
+import Icon from '@/components/icon';
+import { displayMedia } from '@/initial_state';
+import PictureInPicturePlaceholder from '@/components/picture_in_picture_placeholder';
 
 // We use the component (and not the container) since we do not want
 // to use the progress bar to show download progress

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ColumnSettings from '../components/column_settings';
-import { changeColumnParams } from '../../../actions/columns';
+import { changeColumnParams } from '@/actions/columns';
 import api from '../../../api';
 
 const mapStateToProps = (state, { columnId }) => {

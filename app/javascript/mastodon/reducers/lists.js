@@ -5,7 +5,7 @@ import {
   LIST_CREATE_SUCCESS,
   LIST_UPDATE_SUCCESS,
   LIST_DELETE_SUCCESS,
-} from '../actions/lists';
+} from '@/actions/lists';
 import { Map as ImmutableMap, fromJS } from 'immutable';
 
 const initialState = ImmutableMap();

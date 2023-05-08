@@ -2,7 +2,7 @@ import Immutable from 'immutable';
 
 import {
   BLOCKS_INIT_MODAL,
-} from '../actions/blocks';
+} from '@/actions/blocks';
 
 const initialState = Immutable.Map({
   new: Immutable.Map({

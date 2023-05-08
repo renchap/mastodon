@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getScrollbarWidth } from 'mastodon/utils/scrollbar';
-import Base from 'mastodon/components/modal_root';
+import { getScrollbarWidth } from '@/utils/scrollbar';
+import Base from '@/components/modal_root';
 import BundleContainer from '../containers/bundle_container';
 import BundleModalError from './bundle_modal_error';
 import ModalLoading from './modal_loading';
@@ -25,7 +25,7 @@ import {
   InteractionModal,
   SubscribedLanguagesModal,
   ClosedRegistrationsModal,
-} from 'mastodon/features/ui/util/async-components';
+} from '@/features/ui/util/async-components';
 import { Helmet } from 'react-helmet';
 
 const MODAL_COMPONENTS = {

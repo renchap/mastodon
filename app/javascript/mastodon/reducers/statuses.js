@@ -6,7 +6,7 @@ import {
   UNFAVOURITE_SUCCESS,
   BOOKMARK_REQUEST,
   BOOKMARK_FAIL,
-} from '../actions/interactions';
+} from '@/actions/interactions';
 import {
   STATUS_MUTE_SUCCESS,
   STATUS_UNMUTE_SUCCESS,
@@ -17,9 +17,9 @@ import {
   STATUS_TRANSLATE_UNDO,
   STATUS_FETCH_REQUEST,
   STATUS_FETCH_FAIL,
-} from '../actions/statuses';
-import { TIMELINE_DELETE } from '../actions/timelines';
-import { STATUS_IMPORT, STATUSES_IMPORT } from '../actions/importer';
+} from '@/actions/statuses';
+import { TIMELINE_DELETE } from '@/actions/timelines';
+import { STATUS_IMPORT, STATUSES_IMPORT } from '@/actions/importer';
 import { Map as ImmutableMap, fromJS } from 'immutable';
 
 const importStatus = (state, status) => state.set(status.id, fromJS(status));

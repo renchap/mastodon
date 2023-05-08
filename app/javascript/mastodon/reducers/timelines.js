@@ -10,12 +10,12 @@ import {
   TIMELINE_DISCONNECT,
   TIMELINE_LOAD_PENDING,
   TIMELINE_MARK_AS_PARTIAL,
-} from '../actions/timelines';
+} from '@/actions/timelines';
 import {
   ACCOUNT_BLOCK_SUCCESS,
   ACCOUNT_MUTE_SUCCESS,
   ACCOUNT_UNFOLLOW_SUCCESS,
-} from '../actions/accounts';
+} from '@/actions/accounts';
 import { Map as ImmutableMap, List as ImmutableList, OrderedSet as ImmutableOrderedSet, fromJS } from 'immutable';
 import compareId from '../compare_id';
 

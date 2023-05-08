@@ -1,5 +1,5 @@
-import { ACCOUNT_IMPORT, ACCOUNTS_IMPORT } from 'mastodon/actions/importer';
-import { ACCOUNT_REVEAL } from 'mastodon/actions/accounts';
+import { ACCOUNT_IMPORT, ACCOUNTS_IMPORT } from '@/actions/importer';
+import { ACCOUNT_REVEAL } from '@/actions/accounts';
 import { Map as ImmutableMap, fromJS } from 'immutable';
 
 const initialState = ImmutableMap();

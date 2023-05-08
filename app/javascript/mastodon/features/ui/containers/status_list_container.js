@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import StatusList from '../../../components/status_list';
-import { scrollTopTimeline, loadPending } from '../../../actions/timelines';
+import { scrollTopTimeline, loadPending } from '@/actions/timelines';
 import { Map as ImmutableMap, List as ImmutableList } from 'immutable';
 import { createSelector } from 'reselect';
 import { debounce } from 'lodash';
-import { me } from '../../../initial_state';
+import { me } from '@/initial_state';
 
 const makeGetStatusIds = (pending = false) => createSelector([
   (state, { type }) => state.getIn(['settings', type], ImmutableMap()),

@@ -2,12 +2,12 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 import { store } from '../store/configureStore';
-import { hydrateStore } from '../actions/store';
+import { hydrateStore } from '@/actions/store';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import { getLocale } from '../locales';
 import Compose from '../features/standalone/compose';
-import initialState from '../initial_state';
-import { fetchCustomEmojis } from '../actions/custom_emojis';
+import initialState from '@/initial_state';
+import { fetchCustomEmojis } from '@/actions/custom_emojis';
 
 const { localeData, messages } = getLocale();
 addLocaleData(localeData);

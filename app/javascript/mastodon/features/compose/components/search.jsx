@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-import { searchEnabled } from 'mastodon/initial_state';
-import Icon from 'mastodon/components/icon';
+import { searchEnabled } from '@/initial_state';
+import Icon from '@/components/icon';
 import classNames from 'classnames';
-import { HASHTAG_REGEX } from 'mastodon/utils/hashtags';
+import { HASHTAG_REGEX } from '@/utils/hashtags';
 
 const messages = defineMessages({
   placeholder: { id: 'search.placeholder', defaultMessage: 'Search' },

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import FeaturedTags from '../components/featured_tags';
-import { makeGetAccount } from 'mastodon/selectors';
+import { makeGetAccount } from '@/selectors';
 import { List as ImmutableList } from 'immutable';
 
 const mapStateToProps = () => {

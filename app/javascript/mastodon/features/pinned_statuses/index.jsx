@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import { fetchPinnedStatuses } from '../../actions/pin_statuses';
+import { fetchPinnedStatuses } from '@/actions/pin_statuses';
 import Column from '../ui/components/column';
 import ColumnBackButtonSlim from '../../components/column_back_button_slim';
 import StatusList from '../../components/status_list';

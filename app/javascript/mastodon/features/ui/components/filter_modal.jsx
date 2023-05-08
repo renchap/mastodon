@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchStatus } from 'mastodon/actions/statuses';
-import { fetchFilters, createFilter, createFilterStatus } from 'mastodon/actions/filters';
+import { fetchStatus } from '@/actions/statuses';
+import { fetchFilters, createFilter, createFilterStatus } from '@/actions/filters';
 import PropTypes from 'prop-types';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import IconButton from 'mastodon/components/icon_button';
-import SelectFilter from 'mastodon/features/filters/select_filter';
-import AddedToFilter from 'mastodon/features/filters/added_to_filter';
+import IconButton from '@/components/icon_button';
+import SelectFilter from '@/features/filters/select_filter';
+import AddedToFilter from '@/features/filters/added_to_filter';
 
 const messages = defineMessages({
   close: { id: 'lightbox.close', defaultMessage: 'Close' },

@@ -3,21 +3,21 @@ import ImmutablePureComponent from 'react-immutable-pure-component';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { makeGetAccount } from 'mastodon/selectors';
-import Avatar from 'mastodon/components/avatar';
-import DisplayName from 'mastodon/components/display_name';
+import { makeGetAccount } from '@/selectors';
+import Avatar from '@/components/avatar';
+import DisplayName from '@/components/display_name';
 import { Link } from 'react-router-dom';
-import Button from 'mastodon/components/button';
+import Button from '@/components/button';
 import { FormattedMessage, injectIntl, defineMessages } from 'react-intl';
-import { autoPlayGif, me, unfollowModal } from 'mastodon/initial_state';
-import ShortNumber from 'mastodon/components/short_number';
+import { autoPlayGif, me, unfollowModal } from '@/initial_state';
+import ShortNumber from '@/components/short_number';
 import {
   followAccount,
   unfollowAccount,
   unblockAccount,
   unmuteAccount,
-} from 'mastodon/actions/accounts';
-import { openModal } from 'mastodon/actions/modal';
+} from '@/actions/accounts';
+import { openModal } from '@/actions/modal';
 import classNames from 'classnames';
 
 const messages = defineMessages({

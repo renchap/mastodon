@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import StatusContent from 'mastodon/components/status_content';
-import Avatar from 'mastodon/components/avatar';
-import DisplayName from 'mastodon/components/display_name';
-import RelativeTimestamp from 'mastodon/components/relative_timestamp';
+import StatusContent from '@/components/status_content';
+import Avatar from '@/components/avatar';
+import DisplayName from '@/components/display_name';
+import RelativeTimestamp from '@/components/relative_timestamp';
 import Option from './option';
-import MediaAttachments from 'mastodon/components/media_attachments';
+import MediaAttachments from '@/components/media_attachments';
 import { injectIntl, defineMessages } from 'react-intl';
-import Icon from 'mastodon/components/icon';
+import Icon from '@/components/icon';
 
 const messages = defineMessages({
   public_short: { id: 'privacy.public.short', defaultMessage: 'Public' },

@@ -1,11 +1,11 @@
 import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import PropTypes from 'prop-types';
-import Video from 'mastodon/features/video';
+import Video from '@/features/video';
 import { connect } from 'react-redux';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import Footer from 'mastodon/features/picture_in_picture/components/footer';
-import { getAverageFromBlurhash } from 'mastodon/blurhash';
+import Footer from '@/features/picture_in_picture/components/footer';
+import { getAverageFromBlurhash } from '@/blurhash';
 
 const mapStateToProps = (state, { statusId }) => ({
   language: state.getIn(['statuses', statusId, 'language']),

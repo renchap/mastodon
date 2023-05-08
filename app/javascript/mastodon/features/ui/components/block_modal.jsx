@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { injectIntl, FormattedMessage } from 'react-intl';
-import { makeGetAccount } from '../../../selectors';
+import { makeGetAccount } from '@/selectors';
 import Button from '../../../components/button';
-import { closeModal } from '../../../actions/modal';
-import { blockAccount } from '../../../actions/accounts';
-import { initReport } from '../../../actions/reports';
+import { closeModal } from '@/actions/modal';
+import { blockAccount } from '@/actions/accounts';
+import { initReport } from '@/actions/reports';
 
 
 const makeMapStateToProps = () => {

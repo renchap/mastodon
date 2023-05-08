@@ -5,8 +5,8 @@ import TextIconButton from './text_icon_button';
 import Overlay from 'react-overlays/Overlay';
 import { supportsPassiveEvents } from 'detect-passive-events';
 import classNames from 'classnames';
-import { languages as preloadedLanguages } from 'mastodon/initial_state';
-import { loupeIcon, deleteIcon } from 'mastodon/utils/icons';
+import { languages as preloadedLanguages } from '@/initial_state';
+import { loupeIcon, deleteIcon } from '@/utils/icons';
 import fuzzysort from 'fuzzysort';
 
 const messages = defineMessages({

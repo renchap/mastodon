@@ -6,11 +6,11 @@ import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { connect } from 'react-redux';
-import { fetchBookmarkedStatuses, expandBookmarkedStatuses } from 'mastodon/actions/bookmarks';
-import { addColumn, removeColumn, moveColumn } from 'mastodon/actions/columns';
-import ColumnHeader from 'mastodon/components/column_header';
-import StatusList from 'mastodon/components/status_list';
-import Column from 'mastodon/features/ui/components/column';
+import { fetchBookmarkedStatuses, expandBookmarkedStatuses } from '@/actions/bookmarks';
+import { addColumn, removeColumn, moveColumn } from '@/actions/columns';
+import ColumnHeader from '@/components/column_header';
+import StatusList from '@/components/status_list';
+import Column from '@/features/ui/components/column';
 
 const messages = defineMessages({
   heading: { id: 'column.bookmarks', defaultMessage: 'Bookmarks' },

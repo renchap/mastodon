@@ -8,9 +8,9 @@ import {
   CONVERSATIONS_UPDATE,
   CONVERSATIONS_READ,
   CONVERSATIONS_DELETE_SUCCESS,
-} from '../actions/conversations';
-import { ACCOUNT_BLOCK_SUCCESS, ACCOUNT_MUTE_SUCCESS } from 'mastodon/actions/accounts';
-import { DOMAIN_BLOCK_SUCCESS } from 'mastodon/actions/domain_blocks';
+} from '@/actions/conversations';
+import { ACCOUNT_BLOCK_SUCCESS, ACCOUNT_MUTE_SUCCESS } from '@/actions/accounts';
+import { DOMAIN_BLOCK_SUCCESS } from '@/actions/domain_blocks';
 import compareId from '../compare_id';
 
 const initialState = ImmutableMap({

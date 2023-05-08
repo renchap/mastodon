@@ -3,16 +3,16 @@ import { connect } from 'react-redux';
 import { defineMessages, injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import Column from 'mastodon/components/column';
-import ColumnHeader from 'mastodon/components/column_header';
-import { addColumn, removeColumn, moveColumn, changeColumnParams } from 'mastodon/actions/columns';
-import { fetchDirectory, expandDirectory } from 'mastodon/actions/directory';
+import Column from '@/components/column';
+import ColumnHeader from '@/components/column_header';
+import { addColumn, removeColumn, moveColumn, changeColumnParams } from '@/actions/columns';
+import { fetchDirectory, expandDirectory } from '@/actions/directory';
 import { List as ImmutableList } from 'immutable';
 import AccountCard from './components/account_card';
-import RadioButton from 'mastodon/components/radio_button';
-import LoadMore from 'mastodon/components/load_more';
-import ScrollContainer from 'mastodon/containers/scroll_container';
-import LoadingIndicator from 'mastodon/components/loading_indicator';
+import RadioButton from '@/components/radio_button';
+import LoadMore from '@/components/load_more';
+import ScrollContainer from '@/containers/scroll_container';
+import LoadingIndicator from '@/components/loading_indicator';
 import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({

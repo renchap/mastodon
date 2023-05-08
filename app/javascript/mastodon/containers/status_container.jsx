@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Status from '../components/status';
-import { makeGetStatus, makeGetPictureInPicture } from '../selectors';
+import Status from '@/components/status';
+import { makeGetStatus, makeGetPictureInPicture } from '@/selectors';
 import {
   replyCompose,
   mentionCompose,
   directCompose,
-} from '../actions/compose';
+} from '@/actions/compose';
 import {
   reblog,
   favourite,
@@ -16,7 +16,7 @@ import {
   unbookmark,
   pin,
   unpin,
-} from '../actions/interactions';
+} from '@/actions/interactions';
 import {
   muteStatus,
   unmuteStatus,
@@ -27,27 +27,27 @@ import {
   editStatus,
   translateStatus,
   undoStatusTranslation,
-} from '../actions/statuses';
+} from '@/actions/statuses';
 import {
   unmuteAccount,
   unblockAccount,
-} from '../actions/accounts';
+} from '@/actions/accounts';
 import {
   blockDomain,
   unblockDomain,
-} from '../actions/domain_blocks';
+} from '@/actions/domain_blocks';
 import {
   initAddFilter,
-} from '../actions/filters';
-import { initMuteModal } from '../actions/mutes';
-import { initBlockModal } from '../actions/blocks';
-import { initBoostModal } from '../actions/boosts';
-import { initReport } from '../actions/reports';
-import { openModal } from '../actions/modal';
-import { deployPictureInPicture } from '../actions/picture_in_picture';
+} from '@/actions/filters';
+import { initMuteModal } from '@/actions/mutes';
+import { initBlockModal } from '@/actions/blocks';
+import { initBoostModal } from '@/actions/boosts';
+import { initReport } from '@/actions/reports';
+import { openModal } from '@/actions/modal';
+import { deployPictureInPicture } from '@/actions/picture_in_picture';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-import { boostModal, deleteModal } from '../initial_state';
-import { showAlertForError } from '../actions/alerts';
+import { boostModal, deleteModal } from '@/initial_state';
+import { showAlertForError } from '@/actions/alerts';
 
 const messages = defineMessages({
   deleteConfirm: { id: 'confirmations.delete.confirm', defaultMessage: 'Delete' },

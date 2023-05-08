@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import ScrollContainer from 'mastodon/containers/scroll_container';
+import ScrollContainer from '@/containers/scroll_container';
 import PropTypes from 'prop-types';
 import IntersectionObserverArticleContainer from '../containers/intersection_observer_article_container';
 import LoadMore from './load_more';

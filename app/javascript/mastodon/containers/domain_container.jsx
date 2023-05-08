@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { blockDomain, unblockDomain } from '../actions/domain_blocks';
+import { blockDomain, unblockDomain } from '@/actions/domain_blocks';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-import { Domain } from '../components/domain';
-import { openModal } from '../actions/modal';
+import { Domain } from '@/components/domain';
+import { openModal } from '@/actions/modal';
 
 const messages = defineMessages({
   blockDomainConfirm: { id: 'confirmations.domain_block.confirm', defaultMessage: 'Block entire domain' },

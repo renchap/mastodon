@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { revealAccount } from 'mastodon/actions/accounts';
+import { revealAccount } from '@/actions/accounts';
 import { FormattedMessage } from 'react-intl';
-import Button from 'mastodon/components/button';
-import { domain } from 'mastodon/initial_state';
+import Button from '@/components/button';
+import { domain } from '@/initial_state';
 
 const mapDispatchToProps = (dispatch, { accountId }) => ({
 

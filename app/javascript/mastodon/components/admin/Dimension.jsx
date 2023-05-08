@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import api from 'mastodon/api';
+import api from '@/api';
 import { FormattedNumber } from 'react-intl';
-import { roundTo10 } from 'mastodon/utils/numbers';
-import Skeleton from 'mastodon/components/skeleton';
+import { roundTo10 } from '@/utils/numbers';
+import Skeleton from '@/components/skeleton';
 
 export default class Dimension extends React.PureComponent {
 

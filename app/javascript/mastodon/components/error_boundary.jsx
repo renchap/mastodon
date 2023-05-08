@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import { version, source_url } from 'mastodon/initial_state';
+import { version, source_url } from '@/initial_state';
 import StackTrace from 'stacktrace-js';
 import { Helmet } from 'react-helmet';
 

@@ -11,7 +11,7 @@ import {
   ANNOUNCEMENTS_TOGGLE_SHOW,
   ANNOUNCEMENTS_DELETE,
   ANNOUNCEMENTS_DISMISS_SUCCESS,
-} from '../actions/announcements';
+} from '@/actions/announcements';
 import { Map as ImmutableMap, List as ImmutableList, fromJS } from 'immutable';
 
 const initialState = ImmutableMap({

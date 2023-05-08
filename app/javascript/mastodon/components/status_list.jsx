@@ -6,7 +6,7 @@ import StatusContainer from '../containers/status_container';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import LoadGap from './load_gap';
 import ScrollableList from './scrollable_list';
-import RegenerationIndicator from 'mastodon/components/regeneration_indicator';
+import RegenerationIndicator from '@/components/regeneration_indicator';
 
 export default class StatusList extends ImmutablePureComponent {
 

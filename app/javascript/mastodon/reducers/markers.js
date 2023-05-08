@@ -1,6 +1,6 @@
 import {
   MARKERS_SUBMIT_SUCCESS,
-} from '../actions/markers';
+} from '@/actions/markers';
 
 import { Map as ImmutableMap } from 'immutable';
 

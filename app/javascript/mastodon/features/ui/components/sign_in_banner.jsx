@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useDispatch } from 'react-redux';
-import { registrationsOpen } from 'mastodon/initial_state';
-import { openModal } from 'mastodon/actions/modal';
+import { registrationsOpen } from '@/initial_state';
+import { openModal } from '@/actions/modal';
 
 const SignInBanner = () => {
   const dispatch = useDispatch();

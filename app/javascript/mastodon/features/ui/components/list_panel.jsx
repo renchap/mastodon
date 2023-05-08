@@ -5,7 +5,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { fetchLists } from 'mastodon/actions/lists';
+import { fetchLists } from '@/actions/lists';
 import ColumnLink from './column_link';
 
 const getOrderedLists = createSelector([state => state.get('lists')], lists => {

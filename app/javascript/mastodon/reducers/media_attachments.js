@@ -1,4 +1,4 @@
-import { STORE_HYDRATE } from '../actions/store';
+import { STORE_HYDRATE } from '@/actions/store';
 import { Map as ImmutableMap } from 'immutable';
 
 const initialState = ImmutableMap({

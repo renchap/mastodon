@@ -6,11 +6,11 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import { addColumn, removeColumn, moveColumn } from 'mastodon/actions/columns';
-import { fetchFavouritedStatuses, expandFavouritedStatuses } from 'mastodon/actions/favourites';
-import ColumnHeader from 'mastodon/components/column_header';
-import StatusList from 'mastodon/components/status_list';
-import Column from 'mastodon/features/ui/components/column';
+import { addColumn, removeColumn, moveColumn } from '@/actions/columns';
+import { fetchFavouritedStatuses, expandFavouritedStatuses } from '@/actions/favourites';
+import ColumnHeader from '@/components/column_header';
+import StatusList from '@/components/status_list';
+import Column from '@/features/ui/components/column';
 
 const messages = defineMessages({
   heading: { id: 'column.favourites', defaultMessage: 'Favourites' },

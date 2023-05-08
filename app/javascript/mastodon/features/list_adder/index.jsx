@@ -4,7 +4,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { injectIntl } from 'react-intl';
-import { setupListAdder, resetListAdder } from '../../actions/lists';
+import { setupListAdder, resetListAdder } from '@/actions/lists';
 import { createSelector } from 'reselect';
 import List from './components/list';
 import Account from './components/account';

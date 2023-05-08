@@ -1,16 +1,16 @@
 import React from 'react';
-import Column from 'mastodon/components/column';
-import ColumnBackButton from 'mastodon/components/column_back_button';
+import Column from '@/components/column';
+import ColumnBackButton from '@/components/column_back_button';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchSuggestions } from 'mastodon/actions/suggestions';
-import { markAsPartial } from 'mastodon/actions/timelines';
+import { fetchSuggestions } from '@/actions/suggestions';
+import { markAsPartial } from '@/actions/timelines';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import Account from 'mastodon/containers/account_container';
-import EmptyAccount from 'mastodon/components/account';
+import Account from '@/containers/account_container';
+import EmptyAccount from '@/components/account';
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
-import { makeGetAccount } from 'mastodon/selectors';
-import { me } from 'mastodon/initial_state';
+import { makeGetAccount } from '@/selectors';
+import { me } from '@/initial_state';
 import ProgressIndicator from './components/progress_indicator';
 
 const mapStateToProps = () => {

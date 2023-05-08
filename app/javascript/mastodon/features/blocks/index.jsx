@@ -9,7 +9,7 @@ import LoadingIndicator from '../../components/loading_indicator';
 import Column from '../ui/components/column';
 import ColumnBackButtonSlim from '../../components/column_back_button_slim';
 import AccountContainer from '../../containers/account_container';
-import { fetchBlocks, expandBlocks } from '../../actions/blocks';
+import { fetchBlocks, expandBlocks } from '@/actions/blocks';
 import ScrollableList from '../../components/scrollable_list';
 
 const messages = defineMessages({

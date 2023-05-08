@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-import Button from 'mastodon/components/button';
+import Button from '@/components/button';
 import Option from './components/option';
 import { List as ImmutableList } from 'immutable';
 

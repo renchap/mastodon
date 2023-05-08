@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, injectIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
-import Logo from 'mastodon/components/logo';
-import { timelinePreview, showTrends } from 'mastodon/initial_state';
+import Logo from '@/components/logo';
+import { timelinePreview, showTrends } from '@/initial_state';
 import ColumnLink from './column_link';
 import DisabledAccountBanner from './disabled_account_banner';
 import FollowRequestsColumnLink from './follow_requests_column_link';
 import ListPanel from './list_panel';
 import NotificationsCounterIcon from './notifications_counter_icon';
 import SignInBanner from './sign_in_banner';
-import NavigationPortal from 'mastodon/components/navigation_portal';
+import NavigationPortal from '@/components/navigation_portal';
 
 const messages = defineMessages({
   home: { id: 'tabs_bar.home', defaultMessage: 'Home' },

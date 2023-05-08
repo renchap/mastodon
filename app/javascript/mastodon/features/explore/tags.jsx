@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import { ImmutableHashtag as Hashtag } from 'mastodon/components/hashtag';
-import LoadingIndicator from 'mastodon/components/loading_indicator';
+import { ImmutableHashtag as Hashtag } from '@/components/hashtag';
+import LoadingIndicator from '@/components/loading_indicator';
 import { connect } from 'react-redux';
-import { fetchTrendingHashtags } from 'mastodon/actions/trends';
+import { fetchTrendingHashtags } from '@/actions/trends';
 import { FormattedMessage } from 'react-intl';
-import DismissableBanner from 'mastodon/components/dismissable_banner';
+import DismissableBanner from '@/components/dismissable_banner';
 
 const mapStateToProps = state => ({
   hashtags: state.getIn(['trends', 'tags', 'items']),

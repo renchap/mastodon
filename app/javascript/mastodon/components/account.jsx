@@ -6,14 +6,14 @@ import DisplayName from './display_name';
 import IconButton from './icon_button';
 import { defineMessages, injectIntl } from 'react-intl';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import { me } from '../initial_state';
+import { me } from '@/initial_state';
 import RelativeTimestamp from './relative_timestamp';
-import Skeleton from 'mastodon/components/skeleton';
+import Skeleton from '@/components/skeleton';
 import { Link } from 'react-router-dom';
-import { counterRenderer } from 'mastodon/components/common_counter';
-import ShortNumber from 'mastodon/components/short_number';
+import { counterRenderer } from '@/components/common_counter';
+import ShortNumber from '@/components/short_number';
 import classNames from 'classnames';
-import VerifiedBadge from 'mastodon/components/verified_badge';
+import VerifiedBadge from '@/components/verified_badge';
 
 const messages = defineMessages({
   follow: { id: 'account.follow', defaultMessage: 'Follow' },

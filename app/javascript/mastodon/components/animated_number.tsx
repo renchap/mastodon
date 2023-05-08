@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 
 import { TransitionMotion, spring } from 'react-motion';
 
-import { reduceMotion } from '../initial_state';
+import { reduceMotion } from '@/initial_state';
 
 import ShortNumber from './short_number';
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import SearchContainer from 'mastodon/features/compose/containers/search_container';
-import ComposeFormContainer from 'mastodon/features/compose/containers/compose_form_container';
-import NavigationContainer from 'mastodon/features/compose/containers/navigation_container';
+import SearchContainer from '@/features/compose/containers/search_container';
+import ComposeFormContainer from '@/features/compose/containers/compose_form_container';
+import NavigationContainer from '@/features/compose/containers/navigation_container';
 import LinkFooter from './link_footer';
-import ServerBanner from 'mastodon/components/server_banner';
-import { changeComposing, mountCompose, unmountCompose } from 'mastodon/actions/compose';
+import ServerBanner from '@/components/server_banner';
+import { changeComposing, mountCompose, unmountCompose } from '@/actions/compose';
 
 class ComposePanel extends React.PureComponent {
 

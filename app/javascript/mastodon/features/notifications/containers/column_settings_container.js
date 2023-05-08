@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import { defineMessages, injectIntl } from 'react-intl';
 import ColumnSettings from '../components/column_settings';
-import { changeSetting } from '../../../actions/settings';
-import { setFilter, clearNotifications, requestBrowserPermission } from '../../../actions/notifications';
-import { changeAlerts as changePushNotifications } from '../../../actions/push_notifications';
-import { openModal } from '../../../actions/modal';
-import { showAlert } from '../../../actions/alerts';
+import { changeSetting } from '@/actions/settings';
+import { setFilter, clearNotifications, requestBrowserPermission } from '@/actions/notifications';
+import { changeAlerts as changePushNotifications } from '@/actions/push_notifications';
+import { openModal } from '@/actions/modal';
+import { showAlert } from '@/actions/alerts';
 
 const messages = defineMessages({
   clearMessage: { id: 'notifications.clear_confirmation', defaultMessage: 'Are you sure you want to permanently clear all your notifications?' },

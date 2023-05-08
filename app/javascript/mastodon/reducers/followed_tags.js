@@ -5,7 +5,7 @@ import {
   FOLLOWED_HASHTAGS_EXPAND_REQUEST,
   FOLLOWED_HASHTAGS_EXPAND_SUCCESS,
   FOLLOWED_HASHTAGS_EXPAND_FAIL,
-} from 'mastodon/actions/tags';
+} from '@/actions/tags';
 import { Map as ImmutableMap, List as ImmutableList, fromJS } from 'immutable';
 
 const initialState = ImmutableMap({

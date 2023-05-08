@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import { expandSearch } from 'mastodon/actions/search';
-import Account from 'mastodon/containers/account_container';
-import Status from 'mastodon/containers/status_container';
-import { ImmutableHashtag as Hashtag } from 'mastodon/components/hashtag';
+import { expandSearch } from '@/actions/search';
+import Account from '@/containers/account_container';
+import Status from '@/containers/status_container';
+import { ImmutableHashtag as Hashtag } from '@/components/hashtag';
 import { List as ImmutableList } from 'immutable';
-import LoadMore from 'mastodon/components/load_more';
-import LoadingIndicator from 'mastodon/components/loading_indicator';
+import LoadMore from '@/components/load_more';
+import LoadingIndicator from '@/components/loading_indicator';
 import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({

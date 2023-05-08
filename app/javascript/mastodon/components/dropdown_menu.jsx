@@ -5,7 +5,7 @@ import IconButton from './icon_button';
 import Overlay from 'react-overlays/Overlay';
 import { supportsPassiveEvents } from 'detect-passive-events';
 import classNames from 'classnames';
-import { CircularProgress } from 'mastodon/components/loading_indicator';
+import { CircularProgress } from '@/components/loading_indicator';
 
 const listenerOptions = supportsPassiveEvents ? { passive: true } : false;
 let id = 0;

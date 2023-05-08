@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import Toggle from 'react-toggle';
 import Button from '../../../components/button';
-import { closeModal } from '../../../actions/modal';
-import { muteAccount } from '../../../actions/accounts';
-import { toggleHideNotifications, changeMuteDuration } from '../../../actions/mutes';
+import { closeModal } from '@/actions/modal';
+import { muteAccount } from '@/actions/accounts';
+import { toggleHideNotifications, changeMuteDuration } from '@/actions/mutes';
 
 const messages = defineMessages({
   minutes: { id: 'intervals.full.minutes', defaultMessage: '{number, plural, one {# minute} other {# minutes}}' },

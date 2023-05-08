@@ -5,12 +5,12 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { is, List as ImmutableList, Set as ImmutableSet } from 'immutable';
-import { languages as preloadedLanguages } from 'mastodon/initial_state';
-import Option from 'mastodon/features/report/components/option';
+import { languages as preloadedLanguages } from '@/initial_state';
+import Option from '@/features/report/components/option';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
-import IconButton from 'mastodon/components/icon_button';
-import Button from 'mastodon/components/button';
-import { followAccount } from 'mastodon/actions/accounts';
+import IconButton from '@/components/icon_button';
+import Button from '@/components/button';
+import { followAccount } from '@/actions/accounts';
 
 const messages = defineMessages({
   close: { id: 'lightbox.close', defaultMessage: 'Close' },

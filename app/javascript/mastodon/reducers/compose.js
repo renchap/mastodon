@@ -47,13 +47,13 @@ import {
   COMPOSE_CHANGE_MEDIA_FOCUS,
   COMPOSE_SET_STATUS,
   COMPOSE_FOCUS,
-} from '../actions/compose';
-import { TIMELINE_DELETE } from '../actions/timelines';
-import { STORE_HYDRATE } from '../actions/store';
-import { REDRAFT } from '../actions/statuses';
+} from '@/actions/compose';
+import { TIMELINE_DELETE } from '@/actions/timelines';
+import { STORE_HYDRATE } from '@/actions/store';
+import { REDRAFT } from '@/actions/statuses';
 import { Map as ImmutableMap, List as ImmutableList, OrderedSet as ImmutableOrderedSet, fromJS } from 'immutable';
 import uuid from '../uuid';
-import { me } from '../initial_state';
+import { me } from '@/initial_state';
 import { unescapeHTML } from '../utils/html';
 
 const initialState = ImmutableMap({

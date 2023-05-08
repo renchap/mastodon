@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import Story from './components/story';
-import LoadingIndicator from 'mastodon/components/loading_indicator';
+import LoadingIndicator from '@/components/loading_indicator';
 import { connect } from 'react-redux';
-import { fetchTrendingLinks } from 'mastodon/actions/trends';
+import { fetchTrendingLinks } from '@/actions/trends';
 import { FormattedMessage } from 'react-intl';
-import DismissableBanner from 'mastodon/components/dismissable_banner';
+import DismissableBanner from '@/components/dismissable_banner';
 
 const mapStateToProps = state => ({
   links: state.getIn(['trends', 'links', 'items']),

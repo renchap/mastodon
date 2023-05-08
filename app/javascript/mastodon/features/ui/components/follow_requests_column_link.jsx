@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { fetchFollowRequests } from 'mastodon/actions/accounts';
+import { fetchFollowRequests } from '@/actions/accounts';
 import { connect } from 'react-redux';
-import ColumnLink from 'mastodon/features/ui/components/column_link';
-import IconWithBadge from 'mastodon/components/icon_with_badge';
+import ColumnLink from '@/features/ui/components/column_link';
+import IconWithBadge from '@/components/icon_with_badge';
 import { List as ImmutableList } from 'immutable';
 import { injectIntl, defineMessages } from 'react-intl';
 

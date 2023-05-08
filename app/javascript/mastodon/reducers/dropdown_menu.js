@@ -2,7 +2,7 @@ import Immutable from 'immutable';
 import {
   DROPDOWN_MENU_OPEN,
   DROPDOWN_MENU_CLOSE,
-} from '../actions/dropdown_menu';
+} from '@/actions/dropdown_menu';
 
 const initialState = Immutable.Map({ openId: null, keyboard: false, scroll_key: null });
 

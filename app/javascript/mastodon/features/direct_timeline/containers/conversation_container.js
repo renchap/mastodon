@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import Conversation from '../components/conversation';
-import { markConversationRead, deleteConversation } from 'mastodon/actions/conversations';
-import { makeGetStatus } from 'mastodon/selectors';
-import { replyCompose } from 'mastodon/actions/compose';
-import { openModal } from 'mastodon/actions/modal';
-import { muteStatus, unmuteStatus, hideStatus, revealStatus } from 'mastodon/actions/statuses';
+import { markConversationRead, deleteConversation } from '@/actions/conversations';
+import { makeGetStatus } from '@/selectors';
+import { replyCompose } from '@/actions/compose';
+import { openModal } from '@/actions/modal';
+import { muteStatus, unmuteStatus, hideStatus, revealStatus } from '@/actions/statuses';
 import { defineMessages, injectIntl } from 'react-intl';
 
 const messages = defineMessages({

@@ -2,7 +2,7 @@ import React from 'react';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import { ImmutableHashtag as Hashtag } from 'mastodon/components/hashtag';
+import { ImmutableHashtag as Hashtag } from '@/components/hashtag';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 

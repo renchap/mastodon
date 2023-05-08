@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 import StatusListContainer from '../ui/containers/status_list_container';
 import Column from '../../components/column';
 import ColumnHeader from '../../components/column_header';
-import { expandCommunityTimeline } from '../../actions/timelines';
-import { addColumn, removeColumn, moveColumn } from '../../actions/columns';
+import { expandCommunityTimeline } from '@/actions/timelines';
+import { addColumn, removeColumn, moveColumn } from '@/actions/columns';
 import ColumnSettingsContainer from './containers/column_settings_container';
-import { connectCommunityStream } from '../../actions/streaming';
+import { connectCommunityStream } from '@/actions/streaming';
 import { Helmet } from 'react-helmet';
-import { domain } from 'mastodon/initial_state';
-import DismissableBanner from 'mastodon/components/dismissable_banner';
+import { domain } from '@/initial_state';
+import DismissableBanner from '@/components/dismissable_banner';
 
 const messages = defineMessages({
   title: { id: 'column.community', defaultMessage: 'Local timeline' },

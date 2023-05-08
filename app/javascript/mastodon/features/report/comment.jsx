@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
-import Button from 'mastodon/components/button';
+import Button from '@/components/button';
 import Toggle from 'react-toggle';
 
 const messages = defineMessages({

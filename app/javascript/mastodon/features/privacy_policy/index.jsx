@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage, FormattedDate, injectIntl, defineMessages } from 'react-intl';
-import Column from 'mastodon/components/column';
-import api from 'mastodon/api';
-import Skeleton from 'mastodon/components/skeleton';
+import Column from '@/components/column';
+import api from '@/api';
+import Skeleton from '@/components/skeleton';
 
 const messages = defineMessages({
   title: { id: 'privacy_policy.title', defaultMessage: 'Privacy Policy' },

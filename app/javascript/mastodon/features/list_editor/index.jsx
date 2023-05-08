@@ -4,7 +4,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { injectIntl } from 'react-intl';
-import { setupListEditor, clearListSuggestions, resetListEditor } from '../../actions/lists';
+import { setupListEditor, clearListSuggestions, resetListEditor } from '@/actions/lists';
 import Account from './components/account';
 import Search from './components/search';
 import EditListForm from './components/edit_list_form';

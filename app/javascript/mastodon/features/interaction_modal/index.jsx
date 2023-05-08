@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import { registrationsOpen } from 'mastodon/initial_state';
+import { registrationsOpen } from '@/initial_state';
 import { connect } from 'react-redux';
-import Icon from 'mastodon/components/icon';
+import Icon from '@/components/icon';
 import classNames from 'classnames';
-import { openModal, closeModal } from 'mastodon/actions/modal';
+import { openModal, closeModal } from '@/actions/modal';
 
 const mapStateToProps = (state, { accountId }) => ({
   displayNameHtml: state.getIn(['accounts', accountId, 'display_name_html']),

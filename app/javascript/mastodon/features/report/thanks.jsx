@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { FormattedMessage } from 'react-intl';
-import Button from 'mastodon/components/button';
+import Button from '@/components/button';
 import { connect } from 'react-redux';
 import {
   unfollowAccount,
   muteAccount,
   blockAccount,
-} from 'mastodon/actions/accounts';
+} from '@/actions/accounts';
 
 const mapStateToProps = () => ({});
 

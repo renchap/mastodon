@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { makeGetAccount } from '../../../selectors';
+import { makeGetAccount } from '@/selectors';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import Avatar from '../../../components/avatar';

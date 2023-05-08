@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
-import { fetchServer } from 'mastodon/actions/server';
-import ShortNumber from 'mastodon/components/short_number';
-import Skeleton from 'mastodon/components/skeleton';
-import Account from 'mastodon/containers/account_container';
-import { domain } from 'mastodon/initial_state';
-import Image from 'mastodon/components/image';
+import { fetchServer } from '@/actions/server';
+import ShortNumber from '@/components/short_number';
+import Skeleton from '@/components/skeleton';
+import Account from '@/containers/account_container';
+import { domain } from '@/initial_state';
+import Image from '@/components/image';
 import { Link } from 'react-router-dom';
 
 const messages = defineMessages({

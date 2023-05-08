@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import api from 'mastodon/api';
+import api from '@/api';
 import { FormattedMessage, FormattedNumber, FormattedDate } from 'react-intl';
 import classNames from 'classnames';
-import { roundTo10 } from 'mastodon/utils/numbers';
+import { roundTo10 } from '@/utils/numbers';
 
 const dateForCohort = cohort => {
   switch(cohort.frequency) {

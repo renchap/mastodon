@@ -10,18 +10,18 @@ import {
   fetchAccount,
   fetchFollowers,
   expandFollowers,
-} from '../../actions/accounts';
+} from '@/actions/accounts';
 import { FormattedMessage } from 'react-intl';
 import AccountContainer from '../../containers/account_container';
 import Column from '../ui/components/column';
 import HeaderContainer from '../account_timeline/containers/header_container';
 import ColumnBackButton from '../../components/column_back_button';
 import ScrollableList from '../../components/scrollable_list';
-import TimelineHint from 'mastodon/components/timeline_hint';
+import TimelineHint from '@/components/timeline_hint';
 import LimitedAccountHint from '../account_timeline/components/limited_account_hint';
-import { getAccountHidden } from 'mastodon/selectors';
-import { normalizeForLookup } from 'mastodon/reducers/accounts_map';
-import BundleColumnError from 'mastodon/features/ui/components/bundle_column_error';
+import { getAccountHidden } from '@/selectors';
+import { normalizeForLookup } from '@/reducers/accounts_map';
+import BundleColumnError from '@/features/ui/components/bundle_column_error';
 
 const mapStateToProps = (state, { params: { acct, id } }) => {
   const accountId = id || state.getIn(['accounts_map', normalizeForLookup(acct)]);

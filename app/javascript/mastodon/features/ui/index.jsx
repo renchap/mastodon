@@ -8,20 +8,20 @@ import PropTypes from 'prop-types';
 import NotificationsContainer from './containers/notifications_container';
 import LoadingBarContainer from './containers/loading_bar_container';
 import ModalContainer from './containers/modal_container';
-import { layoutFromWindow } from 'mastodon/is_mobile';
+import { layoutFromWindow } from '@/is_mobile';
 import { debounce } from 'lodash';
-import { uploadCompose, resetCompose, changeComposeSpoilerness } from '../../actions/compose';
-import { expandHomeTimeline } from '../../actions/timelines';
-import { expandNotifications } from '../../actions/notifications';
-import { fetchServer, fetchServerTranslationLanguages } from '../../actions/server';
-import { clearHeight } from '../../actions/height_cache';
-import { focusApp, unfocusApp, changeLayout } from 'mastodon/actions/app';
-import { synchronouslySubmitMarkers, submitMarkers, fetchMarkers } from 'mastodon/actions/markers';
+import { uploadCompose, resetCompose, changeComposeSpoilerness } from '@/actions/compose';
+import { expandHomeTimeline } from '@/actions/timelines';
+import { expandNotifications } from '@/actions/notifications';
+import { fetchServer, fetchServerTranslationLanguages } from '@/actions/server';
+import { clearHeight } from '@/actions/height_cache';
+import { focusApp, unfocusApp, changeLayout } from '@/actions/app';
+import { synchronouslySubmitMarkers, submitMarkers, fetchMarkers } from '@/actions/markers';
 import { WrappedSwitch, WrappedRoute } from './util/react_router_helpers';
 import BundleColumnError from './components/bundle_column_error';
 import UploadArea from './components/upload_area';
 import ColumnsAreaContainer from './containers/columns_area_container';
-import PictureInPicture from 'mastodon/features/picture_in_picture';
+import PictureInPicture from '@/features/picture_in_picture';
 import {
   Compose,
   Status,
@@ -55,8 +55,8 @@ import {
   About,
   PrivacyPolicy,
 } from './util/async-components';
-import initialState, { me, owner, singleUserMode, showTrends, trendsAsLanding } from '../../initial_state';
-import { INTRODUCTION_VERSION } from 'mastodon/actions/onboarding';
+import initialState, { me, owner, singleUserMode, showTrends, trendsAsLanding } from '@/initial_state';
+import { INTRODUCTION_VERSION } from '@/actions/onboarding';
 import Header from './components/header';
 
 // Dummy import, to make sure that <Status /> ends up in the application bundle.

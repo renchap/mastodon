@@ -5,9 +5,9 @@ import IconButton from '../../../components/icon_button';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import DropdownMenuContainer from '../../../containers/dropdown_menu_container';
 import { defineMessages, injectIntl } from 'react-intl';
-import { me } from '../../../initial_state';
+import { me } from '@/initial_state';
 import classNames from 'classnames';
-import { PERMISSION_MANAGE_USERS, PERMISSION_MANAGE_FEDERATION } from 'mastodon/permissions';
+import { PERMISSION_MANAGE_USERS, PERMISSION_MANAGE_FEDERATION } from '@/permissions';
 
 const messages = defineMessages({
   delete: { id: 'status.delete', defaultMessage: 'Delete' },

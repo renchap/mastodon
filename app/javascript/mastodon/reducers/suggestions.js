@@ -3,9 +3,9 @@ import {
   SUGGESTIONS_FETCH_SUCCESS,
   SUGGESTIONS_FETCH_FAIL,
   SUGGESTIONS_DISMISS,
-} from '../actions/suggestions';
-import { ACCOUNT_BLOCK_SUCCESS, ACCOUNT_MUTE_SUCCESS } from 'mastodon/actions/accounts';
-import { DOMAIN_BLOCK_SUCCESS } from 'mastodon/actions/domain_blocks';
+} from '@/actions/suggestions';
+import { ACCOUNT_BLOCK_SUCCESS, ACCOUNT_MUTE_SUCCESS } from '@/actions/accounts';
+import { DOMAIN_BLOCK_SUCCESS } from '@/actions/domain_blocks';
 import { Map as ImmutableMap, List as ImmutableList, fromJS } from 'immutable';
 
 const initialState = ImmutableMap({

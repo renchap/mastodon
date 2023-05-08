@@ -2,7 +2,7 @@ import {
   DOMAIN_BLOCKS_FETCH_SUCCESS,
   DOMAIN_BLOCKS_EXPAND_SUCCESS,
   DOMAIN_UNBLOCK_SUCCESS,
-} from '../actions/domain_blocks';
+} from '@/actions/domain_blocks';
 import { Map as ImmutableMap, OrderedSet as ImmutableOrderedSet } from 'immutable';
 
 const initialState = ImmutableMap({

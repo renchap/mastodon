@@ -1,20 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { submitReport } from 'mastodon/actions/reports';
-import { expandAccountTimeline } from 'mastodon/actions/timelines';
-import { fetchServer } from 'mastodon/actions/server';
+import { submitReport } from '@/actions/reports';
+import { expandAccountTimeline } from '@/actions/timelines';
+import { fetchServer } from '@/actions/server';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import { makeGetAccount } from 'mastodon/selectors';
+import { makeGetAccount } from '@/selectors';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import { OrderedSet } from 'immutable';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import IconButton from 'mastodon/components/icon_button';
-import Category from 'mastodon/features/report/category';
-import Statuses from 'mastodon/features/report/statuses';
-import Rules from 'mastodon/features/report/rules';
-import Comment from 'mastodon/features/report/comment';
-import Thanks from 'mastodon/features/report/thanks';
+import IconButton from '@/components/icon_button';
+import Category from '@/features/report/category';
+import Statuses from '@/features/report/statuses';
+import Rules from '@/features/report/rules';
+import Comment from '@/features/report/comment';
+import Thanks from '@/features/report/thanks';
 
 const messages = defineMessages({
   close: { id: 'lightbox.close', defaultMessage: 'Close' },

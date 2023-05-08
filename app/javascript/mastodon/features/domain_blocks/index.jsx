@@ -9,7 +9,7 @@ import LoadingIndicator from '../../components/loading_indicator';
 import Column from '../ui/components/column';
 import ColumnBackButtonSlim from '../../components/column_back_button_slim';
 import DomainContainer from '../../containers/domain_container';
-import { fetchDomainBlocks, expandDomainBlocks } from '../../actions/domain_blocks';
+import { fetchDomainBlocks, expandDomainBlocks } from '@/actions/domain_blocks';
 import ScrollableList from '../../components/scrollable_list';
 import { Helmet } from 'react-helmet';
 

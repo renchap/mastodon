@@ -4,18 +4,18 @@ import { Helmet } from 'react-helmet';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
-import { addColumn, removeColumn, moveColumn } from 'mastodon/actions/columns';
-import { fetchList, deleteList, updateList } from 'mastodon/actions/lists';
-import { openModal } from 'mastodon/actions/modal';
-import { connectListStream } from 'mastodon/actions/streaming';
-import { expandListTimeline } from 'mastodon/actions/timelines';
-import Column from 'mastodon/components/column';
-import ColumnHeader from 'mastodon/components/column_header';
-import Icon from 'mastodon/components/icon';
-import LoadingIndicator from 'mastodon/components/loading_indicator';
-import RadioButton from 'mastodon/components/radio_button';
-import StatusListContainer from 'mastodon/features/ui/containers/status_list_container';
-import BundleColumnError from 'mastodon/features/ui/components/bundle_column_error';
+import { addColumn, removeColumn, moveColumn } from '@/actions/columns';
+import { fetchList, deleteList, updateList } from '@/actions/lists';
+import { openModal } from '@/actions/modal';
+import { connectListStream } from '@/actions/streaming';
+import { expandListTimeline } from '@/actions/timelines';
+import Column from '@/components/column';
+import ColumnHeader from '@/components/column_header';
+import Icon from '@/components/icon';
+import LoadingIndicator from '@/components/loading_indicator';
+import RadioButton from '@/components/radio_button';
+import StatusListContainer from '@/features/ui/containers/status_list_container';
+import BundleColumnError from '@/features/ui/components/bundle_column_error';
 
 const messages = defineMessages({
   deleteMessage: { id: 'confirmations.delete_list.message', defaultMessage: 'Are you sure you want to permanently delete this list?' },

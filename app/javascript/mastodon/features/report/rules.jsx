@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import Button from 'mastodon/components/button';
+import Button from '@/components/button';
 import Option from './components/option';
 
 const mapStateToProps = state => ({

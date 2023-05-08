@@ -3,10 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
-import { domain, version, source_url, statusPageUrl, profile_directory as profileDirectory } from 'mastodon/initial_state';
-import { logOut } from 'mastodon/utils/log_out';
-import { openModal } from 'mastodon/actions/modal';
-import { PERMISSION_INVITE_USERS } from 'mastodon/permissions';
+import { domain, version, source_url, statusPageUrl, profile_directory as profileDirectory } from '@/initial_state';
+import { logOut } from '@/utils/log_out';
+import { openModal } from '@/actions/modal';
+import { PERMISSION_INVITE_USERS } from '@/permissions';
 
 const messages = defineMessages({
   logoutMessage: { id: 'confirmations.logout.message', defaultMessage: 'Are you sure you want to log out?' },

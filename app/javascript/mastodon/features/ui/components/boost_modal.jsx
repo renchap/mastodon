@@ -9,11 +9,11 @@ import Avatar from '../../../components/avatar';
 import RelativeTimestamp from '../../../components/relative_timestamp';
 import DisplayName from '../../../components/display_name';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import Icon from 'mastodon/components/icon';
-import AttachmentList from 'mastodon/components/attachment_list';
-import PrivacyDropdown from 'mastodon/features/compose/components/privacy_dropdown';
+import Icon from '@/components/icon';
+import AttachmentList from '@/components/attachment_list';
+import PrivacyDropdown from '@/features/compose/components/privacy_dropdown';
 import classNames from 'classnames';
-import { changeBoostPrivacy } from 'mastodon/actions/boosts';
+import { changeBoostPrivacy } from '@/actions/boosts';
 
 const messages = defineMessages({
   cancel_reblog: { id: 'status.cancel_reblog_private', defaultMessage: 'Unboost' },

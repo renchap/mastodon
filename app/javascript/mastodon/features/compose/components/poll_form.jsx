@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-import IconButton from 'mastodon/components/icon_button';
-import Icon from 'mastodon/components/icon';
-import AutosuggestInput from 'mastodon/components/autosuggest_input';
+import IconButton from '@/components/icon_button';
+import Icon from '@/components/icon';
+import AutosuggestInput from '@/components/autosuggest_input';
 import classNames from 'classnames';
 
 const messages = defineMessages({

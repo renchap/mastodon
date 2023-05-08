@@ -1,6 +1,6 @@
 import React from 'react';
-import Column from 'mastodon/components/column';
-import ColumnHeader from 'mastodon/components/column_header';
+import Column from '@/components/column';
+import ColumnHeader from '@/components/column_header';
 import ColumnLink from '../ui/components/column_link';
 import ColumnSubheading from '../ui/components/column_subheading';
 import { defineMessages, injectIntl } from 'react-intl';
@@ -8,11 +8,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import { me, showTrends } from '../../initial_state';
-import { fetchFollowRequests } from 'mastodon/actions/accounts';
+import { me, showTrends } from '@/initial_state';
+import { fetchFollowRequests } from '@/actions/accounts';
 import { List as ImmutableList } from 'immutable';
 import NavigationContainer from '../compose/containers/navigation_container';
-import LinkFooter from 'mastodon/features/ui/components/link_footer';
+import LinkFooter from '@/features/ui/components/link_footer';
 import TrendsContainer from './containers/trends_container';
 import { Helmet } from 'react-helmet';
 

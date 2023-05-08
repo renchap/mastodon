@@ -5,7 +5,7 @@ import {
   TRENDS_LINKS_FETCH_REQUEST,
   TRENDS_LINKS_FETCH_SUCCESS,
   TRENDS_LINKS_FETCH_FAIL,
-} from 'mastodon/actions/trends';
+} from '@/actions/trends';
 import { Map as ImmutableMap, List as ImmutableList, fromJS } from 'immutable';
 
 const initialState = ImmutableMap({

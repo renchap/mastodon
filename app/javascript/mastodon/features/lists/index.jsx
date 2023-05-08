@@ -6,13 +6,13 @@ import ImmutablePureComponent from 'react-immutable-pure-component';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { fetchLists } from 'mastodon/actions/lists';
-import LoadingIndicator from 'mastodon/components/loading_indicator';
-import ScrollableList from 'mastodon/components/scrollable_list';
-import Column from 'mastodon/components/column';
-import ColumnHeader from 'mastodon/components/column_header';
-import ColumnLink from 'mastodon/features/ui/components/column_link';
-import ColumnSubheading from 'mastodon/features/ui/components/column_subheading';
+import { fetchLists } from '@/actions/lists';
+import LoadingIndicator from '@/components/loading_indicator';
+import ScrollableList from '@/components/scrollable_list';
+import Column from '@/components/column';
+import ColumnHeader from '@/components/column_header';
+import ColumnLink from '@/features/ui/components/column_link';
+import ColumnSubheading from '@/features/ui/components/column_subheading';
 import NewListForm from './components/new_list_form';
 
 const messages = defineMessages({

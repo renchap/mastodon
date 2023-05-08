@@ -15,8 +15,8 @@ import {
   revealStatus,
   translateStatus,
   undoStatusTranslation,
-} from '../../actions/statuses';
-import LoadingIndicator from 'mastodon/components/loading_indicator';
+} from '@/actions/statuses';
+import LoadingIndicator from '@/components/loading_indicator';
 import DetailedStatus from './components/detailed_status';
 import ActionBar from './components/action_bar';
 import Column from '../ui/components/column';
@@ -29,38 +29,38 @@ import {
   unreblog,
   pin,
   unpin,
-} from '../../actions/interactions';
+} from '@/actions/interactions';
 import {
   replyCompose,
   mentionCompose,
   directCompose,
-} from '../../actions/compose';
+} from '@/actions/compose';
 import {
   unblockAccount,
   unmuteAccount,
-} from '../../actions/accounts';
+} from '@/actions/accounts';
 import {
   blockDomain,
   unblockDomain,
-} from '../../actions/domain_blocks';
-import { initMuteModal } from '../../actions/mutes';
-import { initBlockModal } from '../../actions/blocks';
-import { initBoostModal } from '../../actions/boosts';
-import { initReport } from '../../actions/reports';
-import { makeGetStatus, makeGetPictureInPicture } from '../../selectors';
-import ScrollContainer from 'mastodon/containers/scroll_container';
+} from '@/actions/domain_blocks';
+import { initMuteModal } from '@/actions/mutes';
+import { initBlockModal } from '@/actions/blocks';
+import { initBoostModal } from '@/actions/boosts';
+import { initReport } from '@/actions/reports';
+import { makeGetStatus, makeGetPictureInPicture } from '@/selectors';
+import ScrollContainer from '@/containers/scroll_container';
 import ColumnHeader from '../../components/column_header';
 import StatusContainer from '../../containers/status_container';
-import { openModal } from '../../actions/modal';
+import { openModal } from '@/actions/modal';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { HotKeys } from 'react-hotkeys';
-import { boostModal, deleteModal } from '../../initial_state';
+import { boostModal, deleteModal } from '@/initial_state';
 import { attachFullscreenListener, detachFullscreenListener, isFullscreen } from '../ui/util/fullscreen';
 import { textForScreenReader, defaultMediaVisibility } from '../../components/status';
-import Icon from 'mastodon/components/icon';
+import Icon from '@/components/icon';
 import { Helmet } from 'react-helmet';
-import BundleColumnError from 'mastodon/features/ui/components/bundle_column_error';
+import BundleColumnError from '@/features/ui/components/bundle_column_error';
 
 const messages = defineMessages({
   deleteConfirm: { id: 'confirmations.delete.confirm', defaultMessage: 'Delete' },

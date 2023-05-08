@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { supportsPassiveEvents } from 'detect-passive-events';
 import { buildCustomEmojis, categoriesFromEmojis } from '../../emoji/emoji';
-import { assetHost } from 'mastodon/utils/config';
+import { assetHost } from '@/utils/config';
 
 const messages = defineMessages({
   emoji: { id: 'emoji_button.label', defaultMessage: 'Insert emoji' },

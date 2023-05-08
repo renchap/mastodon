@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import ClearColumnButton from './clear_column_button';
 import GrantPermissionButton from './grant_permission_button';
 import SettingToggle from './setting_toggle';
-import { PERMISSION_MANAGE_USERS, PERMISSION_MANAGE_REPORTS } from 'mastodon/permissions';
+import { PERMISSION_MANAGE_USERS, PERMISSION_MANAGE_REPORTS } from '@/permissions';
 
 export default class ColumnSettings extends React.PureComponent {
 

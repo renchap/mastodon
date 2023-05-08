@@ -5,7 +5,7 @@ import {
   FAVOURITED_STATUSES_EXPAND_REQUEST,
   FAVOURITED_STATUSES_EXPAND_SUCCESS,
   FAVOURITED_STATUSES_EXPAND_FAIL,
-} from '../actions/favourites';
+} from '@/actions/favourites';
 import {
   BOOKMARKED_STATUSES_FETCH_REQUEST,
   BOOKMARKED_STATUSES_FETCH_SUCCESS,
@@ -13,10 +13,10 @@ import {
   BOOKMARKED_STATUSES_EXPAND_REQUEST,
   BOOKMARKED_STATUSES_EXPAND_SUCCESS,
   BOOKMARKED_STATUSES_EXPAND_FAIL,
-} from '../actions/bookmarks';
+} from '@/actions/bookmarks';
 import {
   PINNED_STATUSES_FETCH_SUCCESS,
-} from '../actions/pin_statuses';
+} from '@/actions/pin_statuses';
 import {
   TRENDS_STATUSES_FETCH_REQUEST,
   TRENDS_STATUSES_FETCH_SUCCESS,
@@ -24,7 +24,7 @@ import {
   TRENDS_STATUSES_EXPAND_REQUEST,
   TRENDS_STATUSES_EXPAND_SUCCESS,
   TRENDS_STATUSES_EXPAND_FAIL,
-} from '../actions/trends';
+} from '@/actions/trends';
 import { Map as ImmutableMap, OrderedSet as ImmutableOrderedSet } from 'immutable';
 import {
   FAVOURITE_SUCCESS,
@@ -33,11 +33,11 @@ import {
   UNBOOKMARK_SUCCESS,
   PIN_SUCCESS,
   UNPIN_SUCCESS,
-} from '../actions/interactions';
+} from '@/actions/interactions';
 import {
   ACCOUNT_BLOCK_SUCCESS,
   ACCOUNT_MUTE_SUCCESS,
-} from '../actions/accounts';
+} from '@/actions/accounts';
 
 const initialState = ImmutableMap({
   favourites: ImmutableMap({

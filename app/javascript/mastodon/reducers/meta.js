@@ -1,7 +1,7 @@
-import { STORE_HYDRATE } from 'mastodon/actions/store';
-import { changeLayout } from 'mastodon/actions/app';
+import { STORE_HYDRATE } from '@/actions/store';
+import { changeLayout } from '@/actions/app';
 import { Map as ImmutableMap } from 'immutable';
-import { layoutFromWindow } from 'mastodon/is_mobile';
+import { layoutFromWindow } from '@/is_mobile';
 
 const initialState = ImmutableMap({
   streaming_api_base_url: null,

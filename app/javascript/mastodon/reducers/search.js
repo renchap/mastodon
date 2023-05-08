@@ -8,12 +8,12 @@ import {
   SEARCH_EXPAND_SUCCESS,
   SEARCH_RESULT_CLICK,
   SEARCH_RESULT_FORGET,
-} from '../actions/search';
+} from '@/actions/search';
 import {
   COMPOSE_MENTION,
   COMPOSE_REPLY,
   COMPOSE_DIRECT,
-} from '../actions/compose';
+} from '@/actions/compose';
 import { Map as ImmutableMap, List as ImmutableList, OrderedSet as ImmutableOrderedSet, fromJS } from 'immutable';
 
 const initialState = ImmutableMap({

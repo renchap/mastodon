@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import api from 'mastodon/api';
+import api from '@/api';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import Hashtag from 'mastodon/components/hashtag';
+import Hashtag from '@/components/hashtag';
 
 export default class Trends extends React.PureComponent {
 

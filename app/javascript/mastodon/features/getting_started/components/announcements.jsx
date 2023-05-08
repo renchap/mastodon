@@ -3,18 +3,18 @@ import ImmutablePureComponent from 'react-immutable-pure-component';
 import ReactSwipeableViews from 'react-swipeable-views';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import PropTypes from 'prop-types';
-import IconButton from 'mastodon/components/icon_button';
-import Icon from 'mastodon/components/icon';
+import IconButton from '@/components/icon_button';
+import Icon from '@/components/icon';
 import { defineMessages, injectIntl, FormattedMessage, FormattedDate } from 'react-intl';
-import { autoPlayGif, reduceMotion, disableSwiping, mascot } from 'mastodon/initial_state';
-import elephantUIPlane from 'mastodon/../images/elephant_ui_plane.svg';
-import unicodeMapping from 'mastodon/features/emoji/emoji_unicode_mapping_light';
+import { autoPlayGif, reduceMotion, disableSwiping, mascot } from '@/initial_state';
+import elephantUIPlane from '@/../images/elephant_ui_plane.svg';
+import unicodeMapping from '@/features/emoji/emoji_unicode_mapping_light';
 import classNames from 'classnames';
-import EmojiPickerDropdown from 'mastodon/features/compose/containers/emoji_picker_dropdown_container';
-import AnimatedNumber from 'mastodon/components/animated_number';
+import EmojiPickerDropdown from '@/features/compose/containers/emoji_picker_dropdown_container';
+import AnimatedNumber from '@/components/animated_number';
 import TransitionMotion from 'react-motion/lib/TransitionMotion';
 import spring from 'react-motion/lib/spring';
-import { assetHost } from 'mastodon/utils/config';
+import { assetHost } from '@/utils/config';
 
 const messages = defineMessages({
   close: { id: 'lightbox.close', defaultMessage: 'Close' },

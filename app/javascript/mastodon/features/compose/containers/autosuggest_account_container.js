@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AutosuggestAccount from '../components/autosuggest_account';
-import { makeGetAccount } from '../../../selectors';
+import { makeGetAccount } from '@/selectors';
 
 const makeMapStateToProps = () => {
   const getAccount = makeGetAccount();

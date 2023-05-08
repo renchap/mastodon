@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ShortNumber from 'mastodon/components/short_number';
+import ShortNumber from '@/components/short_number';
 import { FormattedMessage } from 'react-intl';
 
 export default class AutosuggestHashtag extends React.PureComponent {

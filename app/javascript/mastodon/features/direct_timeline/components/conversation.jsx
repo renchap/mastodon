@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import StatusContent from 'mastodon/components/status_content';
-import AttachmentList from 'mastodon/components/attachment_list';
+import StatusContent from '@/components/status_content';
+import AttachmentList from '@/components/attachment_list';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-import DropdownMenuContainer from 'mastodon/containers/dropdown_menu_container';
-import AvatarComposite from 'mastodon/components/avatar_composite';
+import DropdownMenuContainer from '@/containers/dropdown_menu_container';
+import AvatarComposite from '@/components/avatar_composite';
 import { Link } from 'react-router-dom';
-import IconButton from 'mastodon/components/icon_button';
-import RelativeTimestamp from 'mastodon/components/relative_timestamp';
+import IconButton from '@/components/icon_button';
+import RelativeTimestamp from '@/components/relative_timestamp';
 import { HotKeys } from 'react-hotkeys';
-import { autoPlayGif } from 'mastodon/initial_state';
+import { autoPlayGif } from '@/initial_state';
 import classNames from 'classnames';
 
 const messages = defineMessages({

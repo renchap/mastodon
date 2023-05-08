@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, FormattedMessage } from 'react-intl';
-import Column from 'mastodon/components/column';
-import Button from 'mastodon/components/button';
+import Column from '@/components/column';
+import Button from '@/components/button';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import { autoPlayGif } from 'mastodon/initial_state';
+import { autoPlayGif } from '@/initial_state';
 
 class GIF extends React.PureComponent {
 

@@ -94,6 +94,9 @@ module.exports = {
       resolve(settings.source_path),
       'node_modules',
     ],
+    alias: {
+      '@': resolve(__dirname, './../../app/javascript/mastodon'),
+    },
   },
 
   resolveLoader: {

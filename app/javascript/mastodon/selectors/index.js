@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 import { List as ImmutableList, Map as ImmutableMap } from 'immutable';
-import { toServerSideType } from 'mastodon/utils/filters';
-import { me } from '../initial_state';
+import { toServerSideType } from '@/utils/filters';
+import { me } from '@/initial_state';
 
 const getAccountBase         = (state, id) => state.getIn(['accounts', id], null);
 const getAccountCounters     = (state, id) => state.getIn(['accounts_counters', id], null);

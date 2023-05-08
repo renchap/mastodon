@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { expandHomeTimeline } from '../../actions/timelines';
+import { expandHomeTimeline } from '@/actions/timelines';
 import PropTypes from 'prop-types';
 import StatusListContainer from '../ui/containers/status_list_container';
 import Column from '../../components/column';
 import ColumnHeader from '../../components/column_header';
-import { addColumn, removeColumn, moveColumn } from '../../actions/columns';
+import { addColumn, removeColumn, moveColumn } from '@/actions/columns';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import ColumnSettingsContainer from './containers/column_settings_container';
 import { Link } from 'react-router-dom';
-import { fetchAnnouncements, toggleShowAnnouncements } from 'mastodon/actions/announcements';
-import AnnouncementsContainer from 'mastodon/features/getting_started/containers/announcements_container';
+import { fetchAnnouncements, toggleShowAnnouncements } from '@/actions/announcements';
+import AnnouncementsContainer from '@/features/getting_started/containers/announcements_container';
 import classNames from 'classnames';
-import IconWithBadge from 'mastodon/components/icon_with_badge';
-import NotSignedInIndicator from 'mastodon/components/not_signed_in_indicator';
+import IconWithBadge from '@/components/icon_with_badge';
+import NotSignedInIndicator from '@/components/not_signed_in_indicator';
 import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({

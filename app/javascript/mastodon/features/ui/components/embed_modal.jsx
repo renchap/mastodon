@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
-import api from 'mastodon/api';
-import IconButton from 'mastodon/components/icon_button';
+import api from '@/api';
+import IconButton from '@/components/icon_button';
 
 const messages = defineMessages({
   close: { id: 'lightbox.close', defaultMessage: 'Close' },

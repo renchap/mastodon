@@ -7,7 +7,7 @@ import {
   openURL,
   clickSearchResult,
   forgetSearchResult,
-} from 'mastodon/actions/search';
+} from '@/actions/search';
 import Search from '../components/search';
 
 const mapStateToProps = state => ({

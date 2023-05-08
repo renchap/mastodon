@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
-import { disabledAccountId, movedToAccountId, domain } from 'mastodon/initial_state';
-import { openModal } from 'mastodon/actions/modal';
-import { logOut } from 'mastodon/utils/log_out';
+import { disabledAccountId, movedToAccountId, domain } from '@/initial_state';
+import { openModal } from '@/actions/modal';
+import { logOut } from '@/utils/log_out';
 
 const messages = defineMessages({
   logoutMessage: { id: 'confirmations.logout.message', defaultMessage: 'Are you sure you want to log out?' },

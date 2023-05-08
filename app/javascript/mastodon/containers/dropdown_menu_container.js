@@ -1,8 +1,8 @@
-import { openDropdownMenu, closeDropdownMenu } from '../actions/dropdown_menu';
-import { fetchRelationships } from 'mastodon/actions/accounts';
-import { openModal, closeModal } from '../actions/modal';
+import { openDropdownMenu, closeDropdownMenu } from '@/actions/dropdown_menu';
+import { fetchRelationships } from '@/actions/accounts';
+import { openModal, closeModal } from '@/actions/modal';
 import { connect } from 'react-redux';
-import DropdownMenu from '../components/dropdown_menu';
+import DropdownMenu from '@/components/dropdown_menu';
 import { isUserTouching } from '../is_mobile';
 
 const mapStateToProps = state => ({

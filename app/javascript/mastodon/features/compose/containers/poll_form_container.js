@@ -8,7 +8,7 @@ import {
   clearComposeSuggestions,
   fetchComposeSuggestions,
   selectComposeSuggestion,
-} from '../../../actions/compose';
+} from '@/actions/compose';
 
 const mapStateToProps = state => ({
   suggestions: state.getIn(['compose', 'suggestions']),

@@ -1,4 +1,4 @@
-import { showAlertForError } from '../actions/alerts';
+import { showAlertForError } from '@/actions/alerts';
 
 const defaultFailSuffix = 'FAIL';
 

@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import PropTypes from 'prop-types';
-import IconButton from 'mastodon/components/icon_button';
+import IconButton from '@/components/icon_button';
 import classNames from 'classnames';
-import { me, boostModal } from 'mastodon/initial_state';
+import { me, boostModal } from '@/initial_state';
 import { defineMessages, injectIntl } from 'react-intl';
-import { replyCompose } from 'mastodon/actions/compose';
-import { reblog, favourite, unreblog, unfavourite } from 'mastodon/actions/interactions';
-import { makeGetStatus } from 'mastodon/selectors';
-import { initBoostModal } from 'mastodon/actions/boosts';
-import { openModal } from 'mastodon/actions/modal';
+import { replyCompose } from '@/actions/compose';
+import { reblog, favourite, unreblog, unfavourite } from '@/actions/interactions';
+import { makeGetStatus } from '@/selectors';
+import { initBoostModal } from '@/actions/boosts';
+import { openModal } from '@/actions/modal';
 
 const messages = defineMessages({
   reply: { id: 'status.reply', defaultMessage: 'Reply' },

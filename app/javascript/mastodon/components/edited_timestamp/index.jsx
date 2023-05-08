@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import Icon from 'mastodon/components/icon';
+import Icon from '@/components/icon';
 import DropdownMenu from './containers/dropdown_menu_container';
 import { connect } from 'react-redux';
-import { openModal } from 'mastodon/actions/modal';
-import RelativeTimestamp from 'mastodon/components/relative_timestamp';
-import InlineAccount from 'mastodon/components/inline_account';
+import { openModal } from '@/actions/modal';
+import RelativeTimestamp from '@/components/relative_timestamp';
+import InlineAccount from '@/components/inline_account';
 
 const mapDispatchToProps = (dispatch, { statusId }) => ({
 

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-import { toServerSideType } from 'mastodon/utils/filters';
-import { loupeIcon, deleteIcon } from 'mastodon/utils/icons';
-import Icon from 'mastodon/components/icon';
+import { toServerSideType } from '@/utils/filters';
+import { loupeIcon, deleteIcon } from '@/utils/icons';
+import Icon from '@/components/icon';
 import fuzzysort from 'fuzzysort';
 
 const messages = defineMessages({

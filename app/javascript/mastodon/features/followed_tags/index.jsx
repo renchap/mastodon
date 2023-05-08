@@ -5,12 +5,12 @@ import ImmutablePureComponent from 'react-immutable-pure-component';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import ColumnHeader from 'mastodon/components/column_header';
-import ScrollableList from 'mastodon/components/scrollable_list';
-import Column from 'mastodon/features/ui/components/column';
+import ColumnHeader from '@/components/column_header';
+import ScrollableList from '@/components/scrollable_list';
+import Column from '@/features/ui/components/column';
 import { Helmet } from 'react-helmet';
-import Hashtag from 'mastodon/components/hashtag';
-import { expandFollowedHashtags, fetchFollowedHashtags } from 'mastodon/actions/tags';
+import Hashtag from '@/components/hashtag';
+import { expandFollowedHashtags, fetchFollowedHashtags } from '@/actions/tags';
 
 const messages = defineMessages({
   heading: { id: 'followed_tags', defaultMessage: 'Followed hashtags' },

@@ -1,6 +1,6 @@
 import {
   NOTIFICATIONS_UPDATE,
-} from '../actions/notifications';
+} from '@/actions/notifications';
 import {
   ACCOUNT_FOLLOW_SUCCESS,
   ACCOUNT_FOLLOW_REQUEST,
@@ -17,14 +17,14 @@ import {
   RELATIONSHIPS_FETCH_SUCCESS,
   FOLLOW_REQUEST_AUTHORIZE_SUCCESS,
   FOLLOW_REQUEST_REJECT_SUCCESS,
-} from '../actions/accounts';
+} from '@/actions/accounts';
 import {
   DOMAIN_BLOCK_SUCCESS,
   DOMAIN_UNBLOCK_SUCCESS,
-} from '../actions/domain_blocks';
+} from '@/actions/domain_blocks';
 import {
   ACCOUNT_NOTE_SUBMIT_SUCCESS,
-} from '../actions/account_notes';
+} from '@/actions/account_notes';
 import { Map as ImmutableMap, fromJS } from 'immutable';
 
 const normalizeRelationship = (state, relationship) => state.set(relationship.id, fromJS(relationship));

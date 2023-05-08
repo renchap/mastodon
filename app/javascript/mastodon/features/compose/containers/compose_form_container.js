@@ -9,7 +9,7 @@ import {
   changeComposeSpoilerText,
   insertEmojiCompose,
   uploadCompose,
-} from '../../../actions/compose';
+} from '@/actions/compose';
 
 const mapStateToProps = state => ({
   text: state.getIn(['compose', 'text']),

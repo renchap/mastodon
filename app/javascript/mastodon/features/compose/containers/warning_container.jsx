@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import Warning from '../components/warning';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import { me } from 'mastodon/initial_state';
-import { HASHTAG_PATTERN_REGEX } from 'mastodon/utils/hashtags';
+import { me } from '@/initial_state';
+import { HASHTAG_PATTERN_REGEX } from '@/utils/hashtags';
 
 const mapStateToProps = state => ({
   needsLockWarning: state.getIn(['compose', 'privacy']) === 'private' && !state.getIn(['accounts', me, 'locked']),

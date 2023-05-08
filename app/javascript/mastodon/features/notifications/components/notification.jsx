@@ -4,12 +4,12 @@ import { injectIntl, FormattedMessage, defineMessages } from 'react-intl';
 import { HotKeys } from 'react-hotkeys';
 import PropTypes from 'prop-types';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import { me } from 'mastodon/initial_state';
-import StatusContainer from 'mastodon/containers/status_container';
-import AccountContainer from 'mastodon/containers/account_container';
+import { me } from '@/initial_state';
+import StatusContainer from '@/containers/status_container';
+import AccountContainer from '@/containers/account_container';
 import Report from './report';
 import FollowRequestContainer from '../containers/follow_request_container';
-import Icon from 'mastodon/components/icon';
+import Icon from '@/components/icon';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 

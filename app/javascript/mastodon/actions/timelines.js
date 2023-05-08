@@ -1,9 +1,9 @@
 import { importFetchedStatus, importFetchedStatuses } from './importer';
 import { submitMarkers } from './markers';
-import api, { getLinks } from 'mastodon/api';
+import api, { getLinks } from '@/api';
 import { Map as ImmutableMap, List as ImmutableList } from 'immutable';
-import compareId from 'mastodon/compare_id';
-import { usePendingItems as preferPendingItems } from 'mastodon/initial_state';
+import compareId from '@/compare_id';
+import { usePendingItems as preferPendingItems } from '@/initial_state';
 
 export const TIMELINE_UPDATE  = 'TIMELINE_UPDATE';
 export const TIMELINE_DELETE  = 'TIMELINE_DELETE';

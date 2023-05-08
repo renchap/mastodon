@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import api from 'mastodon/api';
+import api from '@/api';
 import { FormattedNumber } from 'react-intl';
 import { Sparklines, SparklinesCurve } from 'react-sparklines';
 import classNames from 'classnames';
-import Skeleton from 'mastodon/components/skeleton';
+import Skeleton from '@/components/skeleton';
 
 const percIncrease = (a, b) => {
   let percent;

@@ -1,9 +1,9 @@
 import { connect }   from 'react-redux';
 import { defineMessages, injectIntl } from 'react-intl';
 import NavigationBar from '../components/navigation_bar';
-import { logOut } from 'mastodon/utils/log_out';
-import { openModal } from 'mastodon/actions/modal';
-import { me } from '../../../initial_state';
+import { logOut } from '@/utils/log_out';
+import { openModal } from '@/actions/modal';
+import { me } from '@/initial_state';
 
 const messages = defineMessages({
   logoutMessage: { id: 'confirmations.logout.message', defaultMessage: 'Are you sure you want to log out?' },

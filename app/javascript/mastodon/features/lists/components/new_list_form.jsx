@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { changeListEditorTitle, submitListEditor } from 'mastodon/actions/lists';
-import Button from 'mastodon/components/button';
+import { changeListEditorTitle, submitListEditor } from '@/actions/lists';
+import Button from '@/components/button';
 import { defineMessages, injectIntl } from 'react-intl';
 
 const messages = defineMessages({

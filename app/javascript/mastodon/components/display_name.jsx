@@ -1,8 +1,8 @@
 import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import PropTypes from 'prop-types';
-import { autoPlayGif } from 'mastodon/initial_state';
-import Skeleton from 'mastodon/components/skeleton';
+import { autoPlayGif } from '@/initial_state';
+import Skeleton from '@/components/skeleton';
 
 export default class DisplayName extends React.PureComponent {
 

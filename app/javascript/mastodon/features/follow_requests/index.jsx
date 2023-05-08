@@ -8,9 +8,9 @@ import { debounce } from 'lodash';
 import Column from '../ui/components/column';
 import ColumnBackButtonSlim from '../../components/column_back_button_slim';
 import AccountAuthorizeContainer from './containers/account_authorize_container';
-import { fetchFollowRequests, expandFollowRequests } from '../../actions/accounts';
+import { fetchFollowRequests, expandFollowRequests } from '@/actions/accounts';
 import ScrollableList from '../../components/scrollable_list';
-import { me } from '../../initial_state';
+import { me } from '@/initial_state';
 import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({

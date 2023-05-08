@@ -2,17 +2,17 @@ import React from 'react';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Column from 'mastodon/components/column';
-import ColumnHeader from 'mastodon/components/column_header';
+import Column from '@/components/column';
+import ColumnHeader from '@/components/column_header';
 import { NavLink, Switch, Route } from 'react-router-dom';
 import Links from './links';
 import Tags from './tags';
 import Statuses from './statuses';
 import Suggestions from './suggestions';
-import Search from 'mastodon/features/compose/containers/search_container';
+import Search from '@/features/compose/containers/search_container';
 import SearchResults from './results';
 import { Helmet } from 'react-helmet';
-import { showTrends } from 'mastodon/initial_state';
+import { showTrends } from '@/initial_state';
 
 const messages = defineMessages({
   title: { id: 'explore.title', defaultMessage: 'Explore' },

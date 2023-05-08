@@ -9,7 +9,7 @@ import LoadingIndicator from '../../components/loading_indicator';
 import Column from '../ui/components/column';
 import ColumnBackButtonSlim from '../../components/column_back_button_slim';
 import AccountContainer from '../../containers/account_container';
-import { fetchMutes, expandMutes } from '../../actions/mutes';
+import { fetchMutes, expandMutes } from '@/actions/mutes';
 import ScrollableList from '../../components/scrollable_list';
 import { Helmet } from 'react-helmet';
 

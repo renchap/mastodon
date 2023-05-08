@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import DetailedStatus from '../components/detailed_status';
-import { makeGetStatus, makeGetPictureInPicture } from '../../../selectors';
+import { makeGetStatus, makeGetPictureInPicture } from '@/selectors';
 import {
   replyCompose,
   mentionCompose,
   directCompose,
-} from '../../../actions/compose';
+} from '@/actions/compose';
 import {
   reblog,
   favourite,
@@ -13,22 +13,22 @@ import {
   unfavourite,
   pin,
   unpin,
-} from '../../../actions/interactions';
+} from '@/actions/interactions';
 import {
   muteStatus,
   unmuteStatus,
   deleteStatus,
   hideStatus,
   revealStatus,
-} from '../../../actions/statuses';
-import { initMuteModal } from '../../../actions/mutes';
-import { initBlockModal } from '../../../actions/blocks';
-import { initBoostModal } from '../../../actions/boosts';
-import { initReport } from '../../../actions/reports';
-import { openModal } from '../../../actions/modal';
+} from '@/actions/statuses';
+import { initMuteModal } from '@/actions/mutes';
+import { initBlockModal } from '@/actions/blocks';
+import { initBoostModal } from '@/actions/boosts';
+import { initReport } from '@/actions/reports';
+import { openModal } from '@/actions/modal';
 import { defineMessages, injectIntl } from 'react-intl';
-import { boostModal, deleteModal } from '../../../initial_state';
-import { showAlertForError } from '../../../actions/alerts';
+import { boostModal, deleteModal } from '@/initial_state';
+import { showAlertForError } from '@/actions/alerts';
 
 const messages = defineMessages({
   deleteConfirm: { id: 'confirmations.delete.confirm', defaultMessage: 'Delete' },

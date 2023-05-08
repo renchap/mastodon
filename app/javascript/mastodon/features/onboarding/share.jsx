@@ -1,13 +1,13 @@
 import React from 'react';
-import Column from 'mastodon/components/column';
-import ColumnBackButton from 'mastodon/components/column_back_button';
+import Column from '@/components/column';
+import ColumnBackButton from '@/components/column_back_button';
 import PropTypes from 'prop-types';
-import { me, domain } from 'mastodon/initial_state';
+import { me, domain } from '@/initial_state';
 import { connect } from 'react-redux';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { defineMessages, injectIntl, FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 import classNames from 'classnames';
-import Icon from 'mastodon/components/icon';
+import Icon from '@/components/icon';
 import ArrowSmallRight from './components/arrow_small_right';
 import { Link } from 'react-router-dom';
 import SwipeableViews from 'react-swipeable-views';

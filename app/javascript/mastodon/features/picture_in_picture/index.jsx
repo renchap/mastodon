@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Video from 'mastodon/features/video';
-import Audio from 'mastodon/features/audio';
-import { removePictureInPicture } from 'mastodon/actions/picture_in_picture';
+import Video from '@/features/video';
+import Audio from '@/features/audio';
+import { removePictureInPicture } from '@/actions/picture_in_picture';
 import Header from './components/header';
 import Footer from './components/footer';
 

@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
+      "@/*": ["app/javascript/mastodon/*"],
       "mastodon": ["app/javascript/mastodon"],
       "mastodon/*": ["app/javascript/mastodon/*"]
     }

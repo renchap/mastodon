@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { changeComposeSensitivity } from 'mastodon/actions/compose';
+import { changeComposeSensitivity } from '@/actions/compose';
 import { injectIntl, defineMessages, FormattedMessage } from 'react-intl';
 
 const messages = defineMessages({

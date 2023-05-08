@@ -3,15 +3,15 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Column from 'mastodon/components/column';
-import LinkFooter from 'mastodon/features/ui/components/link_footer';
+import Column from '@/components/column';
+import LinkFooter from '@/features/ui/components/link_footer';
 import { Helmet } from 'react-helmet';
-import { fetchServer, fetchExtendedDescription, fetchDomainBlocks } from 'mastodon/actions/server';
-import Account from 'mastodon/containers/account_container';
-import Skeleton from 'mastodon/components/skeleton';
-import Icon from 'mastodon/components/icon';
+import { fetchServer, fetchExtendedDescription, fetchDomainBlocks } from '@/actions/server';
+import Account from '@/containers/account_container';
+import Skeleton from '@/components/skeleton';
+import Icon from '@/components/icon';
 import classNames from 'classnames';
-import Image from 'mastodon/components/image';
+import Image from '@/components/image';
 
 const messages = defineMessages({
   title: { id: 'column.about', defaultMessage: 'About' },

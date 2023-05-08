@@ -1,9 +1,9 @@
 import React from 'react';
-import Column from 'mastodon/components/column';
+import Column from '@/components/column';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import ColumnHeader from 'mastodon/components/column_header';
+import ColumnHeader from '@/components/column_header';
 import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import LanguageDropdown from '../components/language_dropdown';
-import { changeComposeLanguage } from 'mastodon/actions/compose';
-import { useLanguage } from 'mastodon/actions/languages';
+import { changeComposeLanguage } from '@/actions/compose';
+import { useLanguage } from '@/actions/languages';
 import { createSelector } from 'reselect';
 import { Map as ImmutableMap } from 'immutable';
 

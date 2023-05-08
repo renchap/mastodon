@@ -1,10 +1,10 @@
 import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import PropTypes from 'prop-types';
-import Audio from 'mastodon/features/audio';
+import Audio from '@/features/audio';
 import { connect } from 'react-redux';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-import Footer from 'mastodon/features/picture_in_picture/components/footer';
+import Footer from '@/features/picture_in_picture/components/footer';
 
 const mapStateToProps = (state, { statusId }) => ({
   language: state.getIn(['statuses', statusId, 'language']),

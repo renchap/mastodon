@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addReaction, removeReaction, dismissAnnouncement } from 'mastodon/actions/announcements';
+import { addReaction, removeReaction, dismissAnnouncement } from '@/actions/announcements';
 import Announcements from '../components/announcements';
 import { createSelector } from 'reselect';
 import { Map as ImmutableMap } from 'immutable';

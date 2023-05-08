@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ConversationsList from '../components/conversations_list';
-import { expandConversations } from '../../../actions/conversations';
+import { expandConversations } from '@/actions/conversations';
 
 const mapStateToProps = state => ({
   conversations: state.getIn(['conversations', 'items']),

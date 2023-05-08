@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import StatusListContainer from '../ui/containers/status_list_container';
 import Column from '../../components/column';
 import ColumnHeader from '../../components/column_header';
-import { expandPublicTimeline } from '../../actions/timelines';
-import { addColumn, removeColumn, moveColumn } from '../../actions/columns';
+import { expandPublicTimeline } from '@/actions/timelines';
+import { addColumn, removeColumn, moveColumn } from '@/actions/columns';
 import ColumnSettingsContainer from './containers/column_settings_container';
-import { connectPublicStream } from '../../actions/streaming';
+import { connectPublicStream } from '@/actions/streaming';
 import { Helmet } from 'react-helmet';
-import DismissableBanner from 'mastodon/components/dismissable_banner';
+import DismissableBanner from '@/components/dismissable_banner';
 
 const messages = defineMessages({
   title: { id: 'column.public', defaultMessage: 'Federated timeline' },

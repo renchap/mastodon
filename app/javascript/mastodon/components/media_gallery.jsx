@@ -5,9 +5,9 @@ import { is } from 'immutable';
 import IconButton from './icon_button';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
-import { autoPlayGif, cropImages, displayMedia, useBlurhash } from '../initial_state';
+import { autoPlayGif, cropImages, displayMedia, useBlurhash } from '@/initial_state';
 import { debounce } from 'lodash';
-import Blurhash from 'mastodon/components/blurhash';
+import Blurhash from '@/components/blurhash';
 
 const messages = defineMessages({
   toggle_visible: { id: 'media_gallery.toggle_visible', defaultMessage: '{number, plural, one {Hide image} other {Hide images}}' },

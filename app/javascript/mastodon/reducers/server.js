@@ -11,7 +11,7 @@ import {
   SERVER_DOMAIN_BLOCKS_FETCH_REQUEST,
   SERVER_DOMAIN_BLOCKS_FETCH_SUCCESS,
   SERVER_DOMAIN_BLOCKS_FETCH_FAIL,
-} from 'mastodon/actions/server';
+} from '@/actions/server';
 import { Map as ImmutableMap, List as ImmutableList, fromJS } from 'immutable';
 
 const initialState = ImmutableMap({

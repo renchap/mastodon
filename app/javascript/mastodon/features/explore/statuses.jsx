@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import StatusList from 'mastodon/components/status_list';
+import StatusList from '@/components/status_list';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import { fetchTrendingStatuses, expandTrendingStatuses } from 'mastodon/actions/trends';
+import { fetchTrendingStatuses, expandTrendingStatuses } from '@/actions/trends';
 import { debounce } from 'lodash';
-import DismissableBanner from 'mastodon/components/dismissable_banner';
+import DismissableBanner from '@/components/dismissable_banner';
 
 const mapStateToProps = state => ({
   statusIds: state.getIn(['status_lists', 'trending', 'items']),

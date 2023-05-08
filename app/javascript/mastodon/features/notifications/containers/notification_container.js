@@ -1,19 +1,19 @@
 import { connect } from 'react-redux';
-import { makeGetNotification, makeGetStatus, makeGetReport } from '../../../selectors';
+import { makeGetNotification, makeGetStatus, makeGetReport } from '@/selectors';
 import Notification from '../components/notification';
-import { initBoostModal } from '../../../actions/boosts';
-import { mentionCompose } from '../../../actions/compose';
+import { initBoostModal } from '@/actions/boosts';
+import { mentionCompose } from '@/actions/compose';
 import {
   reblog,
   favourite,
   unreblog,
   unfavourite,
-} from '../../../actions/interactions';
+} from '@/actions/interactions';
 import {
   hideStatus,
   revealStatus,
-} from '../../../actions/statuses';
-import { boostModal } from '../../../initial_state';
+} from '@/actions/statuses';
+import { boostModal } from '@/initial_state';
 
 const makeMapStateToProps = () => {
   const getNotification = makeGetNotification();

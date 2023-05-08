@@ -5,9 +5,9 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import { FormattedMessage } from 'react-intl';
 import punycode from 'punycode';
 import classnames from 'classnames';
-import Icon from 'mastodon/components/icon';
-import { useBlurhash } from 'mastodon/initial_state';
-import Blurhash from 'mastodon/components/blurhash';
+import Icon from '@/components/icon';
+import { useBlurhash } from '@/initial_state';
+import Blurhash from '@/components/blurhash';
 
 const IDNA_PREFIX = 'xn--';
 
