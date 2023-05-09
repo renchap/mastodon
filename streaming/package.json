@@ -2,6 +2,7 @@
   "name": "@mastodon/streaming-server",
   "license": "AGPL-3.0-or-later",
   "description": "Mastodon's Streaming Server",
+  "version": "1.0.0",
   "private": true,
   "repository": {
     "type": "git",
