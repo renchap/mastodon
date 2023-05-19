@@ -196,6 +196,8 @@ gem 'rubyzip', '~> 2.3'
 
 gem 'hcaptcha', '~> 7.1'
 
-gem 'opentelemetry-sdk', require: false
-gem 'opentelemetry-exporter-otlp', require: false
-gem 'opentelemetry-instrumentation-all', require: false
+group :opentelemetry do
+  gem 'opentelemetry-sdk', require: false
+  gem 'opentelemetry-exporter-otlp', require: false
+  gem 'opentelemetry-instrumentation-all', require: false
+end
