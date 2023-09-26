@@ -41,7 +41,6 @@ Rails.application.routes.draw do
 
   authenticate :user, lambda { |u| u.role&.can?(:view_devops) } do
     mount Sidekiq::Web, at: 'sidekiq', as: :sidekiq
-    mount PgHero::Engine, at: 'pghero', as: :pghero
   end
 
   use_doorkeeper do

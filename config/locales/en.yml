@@ -720,7 +720,7 @@ en:
         view_dashboard: View Dashboard
         view_dashboard_description: Allows users to access the dashboard and various metrics
         view_devops: DevOps
-        view_devops_description: Allows users to access Sidekiq and pgHero dashboards
+        view_devops_description: Allows users to access Sidekiq dashboard
       title: Roles
     rules:
       add_new: Add rule

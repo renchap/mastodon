@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_07_150100) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_26_162114) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -714,15 +714,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_150100) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["device_id"], name: "index_one_time_keys_on_device_id"
     t.index ["key_id"], name: "index_one_time_keys_on_key_id"
-  end
-
-  create_table "pghero_space_stats", force: :cascade do |t|
-    t.text "database"
-    t.text "schema"
-    t.text "relation"
-    t.bigint "size"
-    t.datetime "captured_at", precision: nil
-    t.index ["database", "captured_at"], name: "index_pghero_space_stats_on_database_and_captured_at"
   end
 
   create_table "poll_votes", force: :cascade do |t|

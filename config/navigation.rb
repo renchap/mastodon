@@ -61,7 +61,6 @@ SimpleNavigation::Configuration.run do |navigation|
     end
 
     n.item :sidekiq, safe_join([fa_icon('diamond fw'), 'Sidekiq']), sidekiq_path, link_html: { target: 'sidekiq' }, if: -> { current_user.can?(:view_devops) }
-    n.item :pghero, safe_join([fa_icon('database fw'), 'PgHero']), pghero_path, link_html: { target: 'pghero' }, if: -> { current_user.can?(:view_devops) }
     n.item :logout, safe_join([fa_icon('sign-out fw'), t('auth.logout')]), destroy_user_session_path, link_html: { 'data-method' => 'delete' }
   end
 end

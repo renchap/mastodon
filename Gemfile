@@ -11,7 +11,6 @@ gem 'rack', '~> 2.2.7'
 
 gem 'haml-rails', '~>2.0'
 gem 'pg', '~> 1.5'
-gem 'pghero'
 gem 'dotenv-rails', '~> 2.8'
 
 gem 'aws-sdk-s3', '~> 1.123', require: false
