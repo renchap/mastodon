@@ -306,7 +306,6 @@ Rails/CreateTableWithTimestamps:
     - 'db/migrate/20170823162448_create_status_pins.rb'
     - 'db/migrate/20171116161857_create_list_accounts.rb'
     - 'db/migrate/20180929222014_create_account_conversations.rb'
-    - 'db/migrate/20181007025445_create_pghero_space_stats.rb'
     - 'db/migrate/20190103124649_create_scheduled_statuses.rb'
     - 'db/migrate/20220824233535_create_status_trends.rb'
     - 'db/migrate/20221006061337_create_preview_card_trends.rb'

@@ -68,17 +68,6 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
-  # Debug mode disables concatenation and preprocessing of assets.
-  config.assets.debug = true
-
-  # Suppress logger output for asset requests.
-  config.assets.quiet = true
-
-  # Adds additional error checking when serving assets at runtime.
-  # Checks for improperly declared sprockets dependencies.
-  # Raises helpful error messages.
-  config.assets.raise_runtime_errors = true
-
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
