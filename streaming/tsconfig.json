@@ -4,7 +4,6 @@
     "target": "esnext",
     "module": "CommonJS",
     "moduleResolution": "node",
-    "noUnusedParameters": false,
     "paths": {}
   },
   "include": ["./*.js", "./.eslintrc.js"]

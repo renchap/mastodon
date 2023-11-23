@@ -3,13 +3,12 @@ const { defineConfig } = require('eslint-define-config');
 
 module.exports = defineConfig({
   extends: ['../.eslintrc.js'],
+  env: {
+    browser: false,
+  },
   parserOptions: {
     project: true,
-    tsconfigRootDir: __dirname,
-    ecmaFeatures: {
-      jsx: false,
-    },
-    ecmaVersion: 2021,
+    tsconfigRootDir: __dirname
   },
   rules: {
     'import/no-commonjs': 'off',
