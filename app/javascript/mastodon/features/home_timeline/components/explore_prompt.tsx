@@ -1,21 +1,24 @@
 import { useEffect, useCallback, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 
 import { FormattedMessage, useIntl, defineMessages } from 'react-intl';
 
-import { fetchSuggestions } from 'mastodon/actions/suggestions';
-import { followAccount, unfollowAccount } from 'mastodon/actions/accounts';
-
 import { Link } from 'react-router-dom';
+
+import type {
+  Record as ImmutableRecord,
+  List as ImmutableList,
+} from 'immutable';
 
 import ChevronLeftIcon from '@/material-icons/400-24px/chevron_left.svg?react';
 import ChevronRightIcon from '@/material-icons/400-24px/chevron_right.svg?react';
-
+import { followAccount, unfollowAccount } from 'mastodon/actions/accounts';
+import { fetchSuggestions } from 'mastodon/actions/suggestions';
 import { Avatar } from 'mastodon/components/avatar';
-import { DisplayName } from 'mastodon/components/display_name';
-import { VerifiedBadge } from 'mastodon/components/verified_badge';
 import { Button } from 'mastodon/components/button';
+import { DisplayName } from 'mastodon/components/display_name';
 import { Icon } from 'mastodon/components/icon';
+import { VerifiedBadge } from 'mastodon/components/verified_badge';
+import { useAppSelector, useAppDispatch } from 'mastodon/store';
 
 const messages = defineMessages({
   follow: { id: 'account.follow', defaultMessage: 'Follow' },
@@ -24,15 +27,19 @@ const messages = defineMessages({
   next: { id: 'lightbox.next', defaultMessage: 'Next' },
 });
 
-const Card = ({ id }) => {
+const Card: React.FC<{ id: string }> = ({ id }) => {
   const intl = useIntl();
-  const account = useSelector(state => state.getIn(['accounts', id]));
-  const relationship = useSelector(state => state.getIn(['relationships', id]));
-  const firstVerifiedField = account.get('fields').find(item => !!item.get('verified_at'));
-  const dispatch = useDispatch();
-  const following = relationship?.get('following') || relationship?.get('requested');
+  const account = useAppSelector((state) => state.accounts.get(id));
+
+  const relationship = useAppSelector((state) => state.relationships.get(id));
+
+  const dispatch = useAppDispatch();
+  const following =
+    relationship?.get('following') || relationship?.get('requested');
 
   const handleFollow = useCallback(() => {
+    if (!account) return;
+
     if (following) {
       dispatch(unfollowAccount(account.get('id')));
     } else {
@@ -40,27 +47,49 @@ const Card = ({ id }) => {
     }
   }, [account, following, dispatch]);
 
+  if (!account) return null;
+
+  const firstVerifiedField = account.fields.find(
+    (item) => !!item.get('verified_at'),
+  );
+
   return (
     <div className='inline-follow-suggestions__body__scrollable__card'>
       <div className='inline-follow-suggestions__body__scrollable__card__avatar'>
-        <Link to={`/@${account.get('acct')}`}><Avatar account={account} size={72} /></Link>
+        <Link to={`/@${account.get('acct')}`}>
+          <Avatar account={account} size={72} />
+        </Link>
       </div>
 
       <div className='inline-follow-suggestions__body__scrollable__card__text-stack'>
-        <Link to={`/@${account.get('acct')}`}><DisplayName account={account} /></Link>
-        {firstVerifiedField && <VerifiedBadge link={firstVerifiedField.get('value')} />}
+        <Link to={`/@${account.get('acct')}`}>
+          <DisplayName account={account} />
+        </Link>
+        {firstVerifiedField && (
+          <VerifiedBadge link={firstVerifiedField.get('value')} />
+        )}
       </div>
 
-      <Button text={intl.formatMessage(following ? messages.unfollow : messages.follow)} onClick={handleFollow} />
+      <Button
+        text={intl.formatMessage(
+          following ? messages.unfollow : messages.follow,
+        )}
+        onClick={handleFollow}
+      />
     </div>
   );
 };
 
-export const ExplorePrompt = () => {
+export const ExplorePrompt: React.FC = () => {
   const intl = useIntl();
-  const dispatch = useDispatch();
-  const suggestions = useSelector(state => state.getIn(['suggestions', 'items']));
-  const bodyRef = useRef();
+  const dispatch = useAppDispatch();
+  const suggestions = useAppSelector(
+    (state) =>
+      state.suggestions.get('items') as ImmutableList<
+        ImmutableRecord<{ account: string }>
+      >,
+  );
+  const bodyRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
@@ -71,24 +100,30 @@ export const ExplorePrompt = () => {
   useEffect(() => {
     if (bodyRef.current) {
       setCanScrollLeft(bodyRef.current.scrollLeft > 0);
-      setCanScrollRight((bodyRef.current.scrollLeft + bodyRef.current.clientWidth) < bodyRef.current.scrollWidth);
+      setCanScrollRight(
+        bodyRef.current.scrollLeft + bodyRef.current.clientWidth <
+          bodyRef.current.scrollWidth,
+      );
     }
   }, [setCanScrollRight, canScrollLeft, bodyRef, suggestions]);
 
   const handleLeftNav = useCallback(() => {
-    bodyRef.current.scrollLeft -= 200;
-  }, [bodyRef]);
+    if (bodyRef.current) bodyRef.current.scrollLeft -= 200;
+  }, []);
 
   const handleRightNav = useCallback(() => {
-    bodyRef.current.scrollLeft += 200;
+    if (bodyRef.current) bodyRef.current.scrollLeft += 200;
   }, [bodyRef]);
 
   const handleScroll = useCallback(() => {
     if (bodyRef.current) {
       setCanScrollLeft(bodyRef.current.scrollLeft > 0);
-      setCanScrollRight((bodyRef.current.scrollLeft + bodyRef.current.clientWidth) < bodyRef.current.scrollWidth);
+      setCanScrollRight(
+        bodyRef.current.scrollLeft + bodyRef.current.clientWidth <
+          bodyRef.current.scrollWidth,
+      );
     }
-  }, [setCanScrollRight, canScrollLeft, bodyRef]);
+  }, [setCanScrollRight]);
 
   if (suggestions.isEmpty()) {
     return null;
@@ -97,17 +132,36 @@ export const ExplorePrompt = () => {
   return (
     <div className='inline-follow-suggestions'>
       <div className='inline-follow-suggestions__header'>
-        <h3><FormattedMessage id='follow_suggestions.who_to_follow' defaultMessage='Who to follow' /></h3>
+        <h3>
+          <FormattedMessage
+            id='follow_suggestions.who_to_follow'
+            defaultMessage='Who to follow'
+          />
+        </h3>
 
         <div className='inline-follow-suggestions__header__actions'>
-          <button className='link-button'><FormattedMessage id='follow_suggestions.dismiss' defaultMessage="Don't show again" /></button>
-          <Link to='/explore/suggestions' className='link-button'><FormattedMessage id='follow_suggestions.view_all' defaultMessage='View all' /></Link>
+          <button className='link-button'>
+            <FormattedMessage
+              id='follow_suggestions.dismiss'
+              defaultMessage="Don't show again"
+            />
+          </button>
+          <Link to='/explore/suggestions' className='link-button'>
+            <FormattedMessage
+              id='follow_suggestions.view_all'
+              defaultMessage='View all'
+            />
+          </Link>
         </div>
       </div>
 
       <div className='inline-follow-suggestions__body'>
-        <div className='inline-follow-suggestions__body__scrollable' ref={bodyRef} onScroll={handleScroll}>
-          {suggestions.map(suggestion => (
+        <div
+          className='inline-follow-suggestions__body__scrollable'
+          ref={bodyRef}
+          onScroll={handleScroll}
+        >
+          {suggestions.map((suggestion) => (
             <Card
               key={suggestion.get('account')}
               id={suggestion.get('account')}
@@ -116,14 +170,26 @@ export const ExplorePrompt = () => {
         </div>
 
         {canScrollLeft && (
-          <button className='inline-follow-suggestions__body__scroll-button left' onClick={handleLeftNav} aria-label={intl.formatMessage(messages.previous)}>
-            <div className='inline-follow-suggestions__body__scroll-button__icon'><Icon icon={ChevronLeftIcon} /></div>
+          <button
+            className='inline-follow-suggestions__body__scroll-button left'
+            onClick={handleLeftNav}
+            aria-label={intl.formatMessage(messages.previous)}
+          >
+            <div className='inline-follow-suggestions__body__scroll-button__icon'>
+              <Icon icon={ChevronLeftIcon} id='follow-arrow-left' />
+            </div>
           </button>
         )}
 
         {canScrollRight && (
-          <button className='inline-follow-suggestions__body__scroll-button right' onClick={handleRightNav} aria-label={intl.formatMessage(messages.next)}>
-            <div className='inline-follow-suggestions__body__scroll-button__icon'><Icon icon={ChevronRightIcon} /></div>
+          <button
+            className='inline-follow-suggestions__body__scroll-button right'
+            onClick={handleRightNav}
+            aria-label={intl.formatMessage(messages.next)}
+          >
+            <div className='inline-follow-suggestions__body__scroll-button__icon'>
+              <Icon icon={ChevronRightIcon} id='follow-arrow-right' />
+            </div>
           </button>
         )}
       </div>

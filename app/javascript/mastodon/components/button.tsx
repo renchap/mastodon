@@ -5,7 +5,7 @@ import classNames from 'classnames';
 interface BaseProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   block?: boolean;
   secondary?: boolean;
-  text?: JSX.Element;
+  text?: JSX.Element | string;
 }
 
 interface PropsWithChildren extends BaseProps {
@@ -13,8 +13,7 @@ interface PropsWithChildren extends BaseProps {
 }
 
 interface PropsWithText extends BaseProps {
-  text: JSX.Element;
-  children: never;
+  text: JSX.Element | string;
 }
 
 type Props = PropsWithText | PropsWithChildren;
