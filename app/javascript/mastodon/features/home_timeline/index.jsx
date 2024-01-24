@@ -192,7 +192,7 @@ class HomeTimeline extends PureComponent {
       banners.push(<CriticalUpdateBanner key='critical-update-banner' />);
     }
 
-    if (tooSlow) {
+    if (true || tooSlow) {
       banners.push(<ExplorePrompt key='explore-prompt' />);
     }
 
