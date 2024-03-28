@@ -1,7 +1,8 @@
 import api from '../api';
 
 import { ensureComposeIsVisible, setComposeToStatus } from './compose';
-import { importFetchedStatus, importFetchedStatuses, importFetchedAccount } from './importer';
+import { fetchContext } from './contexts';
+import { importFetchedStatus, importFetchedAccount } from './importer';
 import { deleteFromTimelines } from './timelines';
 
 export const STATUS_FETCH_REQUEST = 'STATUS_FETCH_REQUEST';
@@ -11,10 +12,6 @@ export const STATUS_FETCH_FAIL    = 'STATUS_FETCH_FAIL';
 export const STATUS_DELETE_REQUEST = 'STATUS_DELETE_REQUEST';
 export const STATUS_DELETE_SUCCESS = 'STATUS_DELETE_SUCCESS';
 export const STATUS_DELETE_FAIL    = 'STATUS_DELETE_FAIL';
-
-export const CONTEXT_FETCH_REQUEST = 'CONTEXT_FETCH_REQUEST';
-export const CONTEXT_FETCH_SUCCESS = 'CONTEXT_FETCH_SUCCESS';
-export const CONTEXT_FETCH_FAIL    = 'CONTEXT_FETCH_FAIL';
 
 export const STATUS_MUTE_REQUEST = 'STATUS_MUTE_REQUEST';
 export const STATUS_MUTE_SUCCESS = 'STATUS_MUTE_SUCCESS';
@@ -51,7 +48,7 @@ export function fetchStatus(id, forceFetch = false) {
   return (dispatch, getState) => {
     const skipLoading = !forceFetch && getState().getIn(['statuses', id], null) !== null;
 
-    dispatch(fetchContext(id));
+    dispatch(fetchContext({ id }));
 
     if (skipLoading) {
       return;
@@ -173,50 +170,6 @@ export function deleteStatusFail(id, error) {
 
 export const updateStatus = status => dispatch =>
   dispatch(importFetchedStatus(status));
-
-export function fetchContext(id) {
-  return (dispatch, getState) => {
-    dispatch(fetchContextRequest(id));
-
-    api(getState).get(`/api/v1/statuses/${id}/context`).then(response => {
-      dispatch(importFetchedStatuses(response.data.ancestors.concat(response.data.descendants)));
-      dispatch(fetchContextSuccess(id, response.data.ancestors, response.data.descendants));
-
-    }).catch(error => {
-      if (error.response && error.response.status === 404) {
-        dispatch(deleteFromTimelines(id));
-      }
-
-      dispatch(fetchContextFail(id, error));
-    });
-  };
-}
-
-export function fetchContextRequest(id) {
-  return {
-    type: CONTEXT_FETCH_REQUEST,
-    id,
-  };
-}
-
-export function fetchContextSuccess(id, ancestors, descendants) {
-  return {
-    type: CONTEXT_FETCH_SUCCESS,
-    id,
-    ancestors,
-    descendants,
-    statuses: ancestors.concat(descendants),
-  };
-}
-
-export function fetchContextFail(id, error) {
-  return {
-    type: CONTEXT_FETCH_FAIL,
-    id,
-    error,
-    skipAlert: true,
-  };
-}
 
 export function muteStatus(id) {
   return (dispatch, getState) => {

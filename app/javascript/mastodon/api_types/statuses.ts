@@ -89,3 +89,9 @@ export interface ApiStatusJSON {
   card?: ApiPreviewCardJSON;
   poll?: ApiPollJSON;
 }
+
+// See app/serializers/rest/context_serializer.rb
+export interface ApiStatusContextJSON {
+  ancestors: ApiStatusJSON[];
+  descendants: ApiStatusJSON[];
+}

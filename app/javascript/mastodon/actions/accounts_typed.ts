@@ -1,7 +1,9 @@
 import { createAction } from '@reduxjs/toolkit';
+import type { List as ImmutableList } from 'immutable';
 
 import type { ApiAccountJSON } from 'mastodon/api_types/accounts';
 import type { ApiRelationshipJSON } from 'mastodon/api_types/relationships';
+import type { Status } from 'mastodon/models/status';
 
 export const revealAccount = createAction<{
   id: string;
@@ -67,7 +69,7 @@ export const unfollowAccountFail = createAction(
 
 export const blockAccountSuccess = createAction<{
   relationship: ApiRelationshipJSON;
-  statuses: unknown;
+  statuses: ImmutableList<Status>;
 }>('accounts/block/SUCCESS');
 
 export const unblockAccountSuccess = createAction<{
@@ -76,7 +78,7 @@ export const unblockAccountSuccess = createAction<{
 
 export const muteAccountSuccess = createAction<{
   relationship: ApiRelationshipJSON;
-  statuses: unknown;
+  statuses: ImmutableList<Status>;
 }>('accounts/mute/SUCCESS');
 
 export const unmuteAccountSuccess = createAction<{
