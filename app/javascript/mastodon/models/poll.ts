@@ -54,7 +54,7 @@ interface PollShape
   extends Omit<ApiPollJSON, 'emojis' | 'options' | 'own_votes'> {
   emojis: List<CustomEmoji>;
   options: List<PollOption>;
-  own_votes: List<number>;
+  own_votes?: List<number>;
 }
 export type Poll = RecordOf<PollShape>;
 
@@ -80,7 +80,7 @@ export function createPollFromServerJSON(
   return PollFactory({
     ...serverJSON,
     emojis: List(serverJSON.emojis.map((emoji) => CustomEmojiFactory(emoji))),
-    own_votes: List(serverJSON.own_votes),
+    own_votes: serverJSON.own_votes ? List(serverJSON.own_votes) : undefined,
     options: List(
       serverJSON.options.map((optionJSON, index) => {
         const option = PollOptionFactory({
