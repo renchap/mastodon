@@ -152,7 +152,7 @@ export const Poll: React.FC<{
   lang: string;
   disabled?: boolean;
   refresh?: () => void;
-  onVote: (votes: string[]) => void;
+  onVote?: (votes: string[]) => void;
 }> = ({ poll, lang, disabled, refresh, onVote }) => {
   const intl = useIntl();
 
@@ -206,7 +206,7 @@ export const Poll: React.FC<{
       return;
     }
 
-    onVote(Array.from(selected));
+    onVote?.(Array.from(selected));
   }, [disabled, onVote, selected]);
 
   useEffect(() => {
@@ -272,7 +272,7 @@ export const Poll: React.FC<{
               multiple={poll.multiple}
               voted={option.voted || poll.own_votes?.includes(i) || false}
               leading={poll.options
-                .filterNot((other) => other.title === option.title)
+                .filter((other) => other.title !== option.title)
                 .every((other) => option.votes_count >= other.votes_count)}
               percent={percent}
               disabled={disabled || selected.size === 0}
