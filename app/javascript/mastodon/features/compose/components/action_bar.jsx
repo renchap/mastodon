@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 
 import MoreHorizIcon from '@/material-icons/400-24px/more_horiz.svg?react';
 import { openModal } from 'mastodon/actions/modal';
-import DropdownMenuContainer from 'mastodon/containers/dropdown_menu_container';
+import SimpleDropdownMenuContainer from 'mastodon/containers/simple_dropdown_menu_container';
 
 const messages = defineMessages({
   edit_profile: { id: 'account.edit_profile', defaultMessage: 'Edit profile' },
@@ -52,7 +52,7 @@ export const ActionBar = () => {
   menu.push({ text: intl.formatMessage(messages.logout), action: handleLogoutClick });
 
   return (
-    <DropdownMenuContainer
+    <SimpleDropdownMenuContainer
       items={menu}
       icon='bars'
       iconComponent={MoreHorizIcon}

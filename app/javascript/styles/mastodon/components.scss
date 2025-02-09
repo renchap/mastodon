@@ -10789,3 +10789,137 @@ noscript {
 .lists-scrollable {
   min-height: 50vh;
 }
+
+.simple-dropdown {
+  display: inline-block;
+
+  &__content {
+    display: none;
+    position: absolute;
+  }
+
+  &-menu {
+    background: #fff;
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(240deg, 25%, 88%);
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow:
+      0 20px 25px -5px #{rgba($base-shadow-color, 0.25)},
+      0 8px 10px -6px #{rgba($base-shadow-color, 0.25)};
+    z-index: 9999;
+
+    &__text-button {
+      display: inline-flex;
+      align-items: center;
+      color: inherit;
+      background: transparent;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+
+      &:focus-visible {
+        outline: 1px dotted;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &__container {
+      &__header {
+        border-bottom: 1px solid hsl(240deg, 25%, 88%);
+        padding: 10px 14px;
+        padding-bottom: 14px;
+        margin-bottom: 4px;
+        font-size: 13px;
+        line-height: 18px;
+        color: $darker-text-color;
+      }
+
+      &__list {
+        list-style: none;
+
+        &--scrollable {
+          max-height: 300px;
+          overflow-y: scroll;
+        }
+      }
+
+      &--loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 45px;
+      }
+    }
+
+    &.left {
+      transform-origin: 100% 50%;
+    }
+
+    &.top {
+      transform-origin: 50% 100%;
+    }
+
+    &.bottom {
+      transform-origin: 50% 0;
+    }
+
+    &.right {
+      transform-origin: 0 50%;
+    }
+
+    &__separator {
+      border-bottom: 1px solid hsl(240deg, 25%, 88%);
+      margin: 5px 0;
+      height: 0;
+    }
+
+    &__item {
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 500;
+      display: block;
+
+      &--dangerous {
+        color: $error-value-color;
+      }
+
+      a,
+      button {
+        font: inherit;
+        display: block;
+        width: 100%;
+        padding: 10px 14px;
+        border: 0;
+        margin: 0;
+        background: transparent;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: inherit;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: inherit;
+        border-radius: 4px;
+
+        &:focus,
+        &:hover,
+        &:active {
+          background: hsl(240deg, 25%, 88%);
+          outline: 0;
+        }
+      }
+    }
+  }
+}
